@@ -1,0 +1,24 @@
+# CRUD NODE APP
+
+# dospaces
+
+
+## Enviroment variables
+* PORT, this is server port. by default is 4000
+* NOTES_APP_MONGODB_HOST=localhost
+* NOTES_APP_MONGODB_DATABASE=notes-app
+* BUCKET_NAME=woom
+* AWS_ACCESS_KEY_ID=YSFZRZ6P7PKMDIPIN5LB
+* AWS_SECRET_ACCESS_KEY=qd8ZF29qLgIH6utcec5nGjdabQW1f5CcsMEWAHXNU9M
+* S3_ENDPOINT=sfo2.digitaloceanspaces.com
+
+* SECRET_KEY=234875FJDNS23MK
+
+* CLIENT_ID_FB=205735534370235
+* CLIENT_SECRET_FB=0f518d3091bea5c20c82a1b2513c0594
+
+* USER_1_ENCRYPT=aqwzse159L
+* USER_2_ENCRYPT=alberto_roger7
+
+* MAILUSER = woomclases2020@gmail.com
+* MAILPSSWD = woom_2020
