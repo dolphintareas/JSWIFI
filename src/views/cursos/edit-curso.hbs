@@ -1,0 +1,32 @@
+<div class="col-md-4 mx-auto p-4">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar curso</h3>
+        </div>
+        <div class="card-body">
+            <form action="/cursos/edit/{{curso.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT" required>
+                <div class="form-group">
+                    <input type="text" name="nombre" placeholder="Curso" class="form-control" value="{{curso.nombre}}">
+                </div>
+                <div class="form-group">
+                        <input type="number" class="form-control" placeholder="S/." name="precio" value="{{curso.precio}}" >
+                    </div>
+                
+                <div class="form-group">
+                        <input type="date" class="form-control" placeholder="Fecha de inicio" name="inicio" value="{{curso.inicio}}">
+                </div>
+                
+                <div class="form-group">
+                            <textarea name="contenido" placeholder="Contenido" class="form-control">{{curso.contenido}}</textarea>
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

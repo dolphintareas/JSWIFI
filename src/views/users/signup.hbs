@@ -1,0 +1,54 @@
+<br>
+
+<div class="row  p-1">
+    
+
+    
+    <div class="col-md-3 mx-auto">
+        <div class="card cardh sinupform">
+            <div class="card-header">
+                Registrate
+            </div>
+            <div class="card-body">
+                <form action="/users/signup" method="POST" id="signupform">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="name" placeholder="Nombres" value="{{name}}" id="signupname" autofocus required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="lastname" placeholder="Apellidos" value="{{lastname}}" >
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="email" placeholder="Email" value="{{email}}" id="signupemail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="telefono" placeholder="Teléfono" value="{{telefono}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="pais" placeholder="País" value="{{pais}}">
+                    </div>
+                    <hr>
+                    <div  class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Contraseña" value="{{password}}" id="signuppassword" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="confirm_password"
+                            placeholder="Confirmar contraseña" value="{{confirm_password}}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="roles" placeholder="roles" value="{{roles}}" style="display: none;">
+                    </div>
+
+                    <button class="btn btn-primary btn-block">
+                        Registrar
+                    </button>
+                    <p class="warnings" id="signupwarnings"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
+<br>
+

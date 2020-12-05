@@ -1,0 +1,19 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            {{>panelfiles}}
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+                {{#each images}}   
+                      {{this}},                 
+                    <div class="col-md-4">
+                       <img src="{{this.url}}" alt="Images" class="img-fluid">
+                       
+                       {{this.url}}
+                    </div>
+                {{/each}}
+           </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+
+
+<div class="contenedor_loader">
+    <div class="loader"></div>
+</div>
+<br>
+<br>
+
+<div class="row">
+    <div class="col p-4 ">
+        <a href="/users/signup" class="float-left"> Añadir usuario  <i class="fa fa-plus " aria-hidden="true"></i> </a> 
+       
+       
+    </div>
+</div>
+
+ <div class="container">
+      <div class="row">
+        <div class="mx-auto">
+         
+     </div>
+ </div>
+</div>
+<div class="row">
+<div class="col-md-5"> 
+</div>
+</div>
+
+<table class="table table-responsive table-striped  ">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Correo</th>
+            <th>Contraseña</th>
+            <th>Teléfono</th>
+            <th>País</th>
+            <th>Creado</th>
+            <th>Actualizado</th>
+            <th>Rol</th>
+            <th>Editar</th>
+            <th>Borrar</th>
+            <th>Tareas</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each Users}}  
+        <tr>
+             <td>{{_id}}</td>
+            <td>{{name}}</td>
+            <td>{{lastname}}</td>
+            <td>{{email}}</td>
+            <td>{{password}}</td>
+            <td>{{telefono}}</td>
+            <td>{{pais}}</td>
+            <td>{{createdAt}}</td>
+            <td>{{updatedAt}}</td>
+            <td>{{roles}}</td>
+            <td><a href="/users/edit/{{_id}}"><i class="fa fa-pencil"></i></a></td>
+            <td><form action="/users/delete/{{_id}}?_method=DELETE" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+                            </form></td>
+            <td><a href="/users/notes/{{_id}}"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

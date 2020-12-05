@@ -1,0 +1,63 @@
+<br>
+<div class="contenedor_loader">
+    <div class="loader"></div>
+</div>
+   
+    <div class="row mx-auto p-2 showfooter" >         
+                    <a href="/cursos/add"><i class="fa fa-plus" aria-hidden="true"></i> Crear curso </a>
+        </div> 
+
+
+<table class="table table-responsive table-striped p-4">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>S/.</th>
+            <th>Descripcion</th>
+            <th>Fecha de inicio</th>
+            <th>Numero contacto</th>
+            <th>Creado</th>
+            <th>Actualizado</th>
+            <th>Editar</th>
+            <th>Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each cursos}}  
+        <tr>
+             <td>{{_id}}</td>
+            <td>{{nombre}}</td>
+            <td>{{precio}}</td>
+            <td>{{contenido}}</td>
+            <td>{{inicio}}</td>
+            <td>{{contacto}}</td>
+            <td>{{createdAt}}</td>
+            <td>{{updatedAt}}</td>
+            <td><a href="/cursos/edit/{{_id}}"><i class="fa fa-pencil"></i></a></td>
+            <td><form action="/cursos/delete/{{_id}}?_method=DELETE" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+                            </form></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

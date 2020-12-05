@@ -1,0 +1,83 @@
+
+<div class="contenedor_loader">
+    <div class="loader"></div>
+</div>
+   
+<div class="row mx-auto p-2 showfooter" >         
+<a href="/notes/add"><i class="fa fa-plus" aria-hidden="true"></i> Crear nueva tarea </a>
+</div> 
+
+    
+    <div class="row mx-auto "> 
+      
+            {{#each notes}}      
+                <div class="col-md-3 mx-auto p-4">
+                    
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title d-flex justify-content-between align-items-center">
+                                {{title}} <a href="/notes/edit/{{_id}}"><i class="fa fa-pencil"></i></a>
+                            </h4>
+                            <div style="font-size: 8px;">{{createdAt}}</div>
+                            <hr>
+                            <p>{{description}} </p>
+                    
+                            
+                            
+                            <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST" onclick="return confirm('Estas seguro que quieres eliminar la tarea?');">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+                                
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                {{else}}
+
+                <div class="card mx-auto">
+                    <div class="card-body">
+                        <p class="lead"> Aun no tienes tareas. Empieza ahora!</p>
+                        <a href="/notes/add" class="btn btn-success btn-block"> Añadir tarea</a>
+                    </div>
+                </div>
+                
+            {{/each}}
+            
+
+        </div>  
+   
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+
+<script> 
+  
+</script>

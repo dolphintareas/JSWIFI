@@ -1,0 +1,149 @@
+
+<script>
+   
+    function img(x){
+        if (x==0){
+            document.getElementById('myimg').style.display='block';
+            document.getElementById('myimg2').style.display='none';
+            document.getElementById('myimg3').style.display='none';
+            document.getElementById('myimg4').style.display='none';
+            }
+        if (x==1){
+            document.getElementById('myimg').style.display='none';
+            document.getElementById('myimg2').style.display='block';
+            document.getElementById('myimg3').style.display='none';
+            document.getElementById('myimg4').style.display='none';
+            }
+        if (x==2){
+            document.getElementById('myimg').style.display='none';
+            document.getElementById('myimg2').style.display='none';
+            document.getElementById('myimg3').style.display='block';
+            document.getElementById('myimg4').style.display='none';
+            }
+        if (x==3){
+            document.getElementById('myimg').style.display='none';
+            document.getElementById('myimg2').style.display='none';
+            document.getElementById('myimg3').style.display='none';
+            document.getElementById('myimg4').style.display='block';
+            }
+   
+    }
+</script>
+
+
+<br>
+<div class="main-contenedor main-contenedor1">
+    <section class="contenido-header">
+        
+        <section class="textos-header textos-header1">
+            <h1>Concreta tu clase</h1>
+            <p>Puedes hacer uso de Yape, Lukita, o Plin para hacer tus pagos. Para otro medio de pago ingresa al botón de Whatsapp para mas información</p>
+            <a href="#pagos">Ir a pagos</a>
+        </section>
+        
+    </section>
+    <div id="pagos"></div>
+</div>
+
+<div class="container " >
+
+    <div class="row ">
+    <hr>
+        <div class="col-md-6">
+            <br>
+            <br>
+            <div class="list-header p-2" >Selecciona un metodo de pago: </div>
+            <br>
+            <div class=" list-group">
+                <ul>
+                    <input type="radio" name="pago" id="yape" onclick="img(0)" >
+                    <label for="yape">YAPE</label>
+
+                </ul>
+                <ul>
+                    <input type="radio" name="pago" id="plin" onclick="img(1)">
+                    <label for="plin">PLIN</label>
+                </ul>
+                <ul>
+                    <input type="radio" name="pago" id="lukita" onclick="img(2)">
+                    <label for="lukita">LUKITA</label>
+                </ul>
+                <ul>
+                    <input type="radio" name="pago" id="transferencia" onclick="img(3)">
+                    <label for="transferencia">Transferencia bancaria</label>
+                </ul>
+            </div>
+            <hr>
+        </div>
+
+
+        <div class="col-md-3 img-group">
+                    
+                        <div class="mx-auto">
+                            <div class="card" id="myimg" style="display: none">
+                                <img src="/img/pagos1.png" alt="" class="card-img-top" >
+
+                            </div>
+                            <div class="card" id="myimg2" style="display: none">
+                                <img src="/img/pagos3.png" alt="" class="card-img-top" >
+
+                            </div>
+                            <div class="card" id="myimg3" style="display: none">
+                                <img src="/img/pagos2.png" alt="" class="card-img-top" >
+
+                            </div>
+                            <div class="card" id="myimg4" style="display: none">
+                                <h1>Esta opción se habilitará pronto</h1>
+
+                            </div>
+            </div>
+              
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<a href="https://api.whatsapp.com/send?phone=51937875282" class="btn-wsp" target="blank"><i class="fa fa-whatsapp"
+        aria-hidden="true"></i>
+</a>
+
+
+
+{{!-- 
+<div class="card">
+    <img src="" alt="" class="card-img-top">
+    <div class="card-body">
+        <h2>30 $</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos consequuntur,
+            soluta quia perferendis ut suscipit!
+        </p>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-dark btn-block">
+            Buy <i class="fa fa-shopping-cart"></i>
+        </button>
+    </div>
+
+</div> --}}
+
+
+
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+<br>
+
+<br>
+
+<br>
