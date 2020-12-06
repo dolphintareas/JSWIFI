@@ -40,7 +40,7 @@ passport.use(new LocalStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.CLIENT_ID_FB,
     clientSecret: process.env.CLIENT_SECRET_FB,
-    callbackURL: "http://localhost:4000/users/fbSignin/Valid",
+    callbackURL: "/users/fbSignin/Valid",
     profileFields: ['id', 'emails', 'displayName']
   },
   async (accessToken, refreshToken, profile, done) => {

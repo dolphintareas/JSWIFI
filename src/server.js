@@ -1,4 +1,5 @@
 const express = require('express');
+const Handlebars = require('handlebars');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const morgan = require('morgan');
@@ -6,6 +7,7 @@ const methodOverride = require('method-override');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access');
 
 const {createRoles, createAdmin} = require('./libs/initialSetup');
 
@@ -23,6 +25,7 @@ app.engine('.hbs', exphbs({
     defaultLayout: 'main',
     layoutsDir: path.join (app.get('views'), 'layouts'),
     partialsDir: path.join(app.get('views'), 'partials'),
+    handlebars: allowInsecurePrototypeAccess(Handlebars),
     extname: '.hbs'
 }));
 app.set('view engine', '.hbs');

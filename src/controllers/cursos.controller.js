@@ -6,14 +6,14 @@ const Curso = require('../models/Curso')
 
 //router.post('/cursos/busquedas', findCourse);
 cursosCtrl.findCourse = (req, res) => {
-    res.render('cursos/busquedas');
+    res.render('cursos/busquedas',{titlepage: 'Buscar curso'});
 }
 
 
 //router.get('/cursos/all', showCourses);
 cursosCtrl.showCourses = async (req, res) => {
     const cursos = await Curso.find().sort({createdAt: 'desc'});
-    res.render('cursos/all-cursos',{cursos});
+    res.render('cursos/all-cursos',{cursos, titlepage: 'Cursos registrados'});
 }
 
 
@@ -22,7 +22,7 @@ cursosCtrl.showCourses = async (req, res) => {
 //router.get('/cursos/add', renderCourseForm);
 cursosCtrl.renderCoursesForm = (req, res) => {
     
-    res.render('cursos/new-curso');
+    res.render('cursos/new-curso',{titlepage: 'Agrega un curso'});
 }
 
 //router.post('/cursos/add', newCourse);
@@ -41,7 +41,7 @@ cursosCtrl.renderEditCourse = async (req, res) => {
     
     const curso = await Curso.findById(req.params.id);
     
-    res.render('cursos/edit-curso',{curso})
+    res.render('cursos/edit-curso',{curso, titlepage: 'Editar cursos'})
     
 };
 
@@ -63,7 +63,7 @@ cursosCtrl.deleteCourse = async (req, res) => {
 
 //router.get('/cursos/find',renderFindCourse);
 cursosCtrl.renderFindCourse = async (req, res) => {    
-    res.render('cursos/busquedas')
+    res.render('cursos/busquedas',{titlepage: 'Buscar curso'})
 };
 
 

@@ -2,7 +2,7 @@ const {Router} = require('express');
 const router = Router();
 
 
-const {renderSignUpForm, renderSigninForm, signup, signin, logout, fbsignin, fbsigninValid, renderPaymentForm, Payment, aboutUs} = require ('../controllers/auth.controller')
+const {renderSignUpForm, renderSigninForm, signup, signin, logout, fbsignin, fbsigninValid, renderPaymentForm, Payment} = require ('../controllers/auth.controller')
 
 
 router.get('/users/signup', renderSignUpForm);

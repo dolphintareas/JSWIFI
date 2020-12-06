@@ -12,7 +12,7 @@ const Note = require('../models/Note')
     usersCtrl.showUsers = async (req, res) => {
         const Users = await User.find().sort({createdAt: 'desc'});
         
-        res.render('users/all-users',{Users});
+        res.render('users/all-users',{Users,titlepage: 'Usuarios registrados'});
     }
 
     //editar USUARIOS
@@ -21,7 +21,7 @@ const Note = require('../models/Note')
     
         const user = await User.findById(req.params.id);
         
-        res.render('users/edit-user',{user})
+        res.render('users/edit-user',{user, titlepage: 'Editar usuario'})
         
     };
 
@@ -49,7 +49,7 @@ const Note = require('../models/Note')
     //router.get('/users/notes/:id', renderUserNotes);
     usersCtrl.renderUserNotes = async (req, res) => {
         const notes = await Note.find({user: req.params.id}).sort({createdAt: 'desc'});
-        res.render('users/users-notes', {notes});
+        res.render('users/users-notes', {notes, titlepage: 'Tareas de usuarios'});
     }
 
 

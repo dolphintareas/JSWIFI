@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken');
 const config = require('../config');
 
 authCtrl.renderSignUpForm = (req, res) => {
-    res.render('users/signup');
+    res.render('users/signup',{titlepage: 'Registrate en Woom'});
 }
 
 authCtrl.signup = async (req, res) =>{
@@ -79,7 +79,7 @@ authCtrl.signup = async (req, res) =>{
 
     authCtrl.renderSigninForm = (req, res) => {
         
-        res.render('users/signin');
+        res.render('users/signin',{titlepage: 'Inicia sesión en Woom'});
     }
 
     authCtrl.signin = passport.authenticate('local', {
@@ -108,7 +108,7 @@ authCtrl.signup = async (req, res) =>{
     //router.get('/users/payment', renderPaymentForm);
     authCtrl.renderPaymentForm = (req, res) => {
         
-        res.render('users/payment');
+        res.render('users/payment',{titlepage: 'Medios de pago Woom'});
     }
 
     //router.post('/users/payment', Payment);

@@ -5,12 +5,12 @@ indexCtrl.renderIndex = (req, res)=>{
 };
 
 indexCtrl.renderAbout = (req, res)=>{
-    res.render('about')
+    res.render('about',{titlepage: 'Woom! Quienes Somos'})
 };
 
 //router.get('/contact', renderContact);
 indexCtrl.renderContact = (req, res)=>{
-    res.render('contacto')
+    res.render('contacto',{titlepage: 'Woom! Aprende ahora'})
 };
 
 module.exports = indexCtrl;

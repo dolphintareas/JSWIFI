@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.3",
     "aws-sdk": "^2.799.0",
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
@@ -34,7 +35,7 @@
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "handlebars": "^4.5.0",
+    "handlebars": "^4.5.3",
     "nodemon": "^2.0.6",
     "npm-check-updates": "^10.1.1"
   }

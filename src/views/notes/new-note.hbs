@@ -1,47 +1,49 @@
-<script type="text/javascript"> 
-     function stopRKey(evt) { 
-      var evt = (evt) ? evt : ((event) ? event : null); 
-      var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
-      if ((evt.keyCode == 13) && ((node.type=="text") || (node.type=="radio") || (node.type=="checkbox"))) {return false;} 
-     } 
+<script type="text/javascript">
+    function stopRKey(evt) {
+        var evt = (evt) ? evt : ((event) ? event : null);
+        var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+        if ((evt.keyCode == 13) && ((node.type == "text") || (node.type == "radio") || (node.type == "checkbox"))) { return false; }
+    }
 
-     document.onkeypress = stopRKey; 
-
-
-
-</script> 
+    document.onkeypress = stopRKey;
 
 
-<div >
-    
+
+</script>
+
+
+<div>
     <p class="p-4">
-<i class="fa fa-smile-o" aria-hidden="true"></i> Indica el tiempo de entrega para tu tarea en la descripción <br>
-    <i class="fa fa-smile-o" aria-hidden="true"></i> Puedes subir tu tarea en cualquier formato, te recomendamos subirlas como imagen o pdf <br>
-    <i class="fa fa-smile-o" aria-hidden="true"></i> Opcionalmente indica el número de ejercicios que contiene tu tarea  <br>
-
-</p>
-        
+        <i class="fa fa-smile-o" aria-hidden="true"></i> Indica el tiempo de entrega para tu tarea en la descripción
+        <br>
+        <i class="fa fa-smile-o" aria-hidden="true"></i> Puedes subir tu tarea en cualquier formato, te recomendamos
+        subirlas como imagen o pdf <br>
+        <i class="fa fa-smile-o" aria-hidden="true"></i> Opcionalmente indica el número de ejercicios que contiene tu
+        tarea <br>
+    </p>
 </div>
+
+
+
 <section class="container">
+    <div class="row p-4 showfooter">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center cardh cursoform">
+                <div class="card-header">
+                    <h4>TAREA NUEVA</h4>
+                </div>
+                {{!-- <form action="/notes/new-note" method="POST"> --}}
 
- 
+                <div class="card card-body">
 
-<div class="row p-4 showfooter">
-    <div class="col-md-4 mx-auto">
-    <div class="card text-center cardh">
-        <div class="card-header">
-            <h4>TAREA NUEVA</h4>
-        </div>
-        {{!-- <form action="/notes/new-note" method="POST"> --}}
-            
-            <div class="card card-body">
-                
                     <form action="/notes/new-note" method="POST" id="noteform" enctype="multipart/form-data">
                         <div class="form-group ">
-                        <input type="text" name="title" id="notename" class="form-control" placeholder="Nombre de la tarea" autofocus >
+                            <input type="text" name="title" id="notename" class="form-control"
+                                placeholder="Nombre de la tarea" autofocus>
                         </div>
-                        <div class="form-group" >
-                            <textarea name="description" id="notedescription" placeholder="Descripción de la tarea" class="form-control" ></textarea>
+                        <div class="form-group">
+                            <textarea name="description" id="notedescription" placeholder="Descripción de la tarea"
+                                class="form-control"></textarea>
                         </div>
 
 
@@ -50,36 +52,29 @@
                             <input type="file" name="upload" id="file" class="form-control">
                         </div>
 
-                        
+
                         <button type="submit" id="carga" class="btn btn-success btn-block btnnew">
                             Subir mi tarea
                         </button>
                         <p class="warnings" id="notewarnings"></p>
                         {{!-- <p class="d-none loading" >Espera mientras subimos tu tarea...</p> --}}
-
-
                     </form>
-
-                    
-                    
-            </div>
+                </div>
 
 
-            {{!-- <div class="form-group">
+                {{!-- <div class="form-group">
                 <button class="btn btn-primary btn-block">
                     Guardar mi tarea
                 </button>
             </div> 
         </form>--}}
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
     </div>
-    <br>
-<br>
-<br>
-<br>
-<br>
-
-
-</div>
-
 
 </section>

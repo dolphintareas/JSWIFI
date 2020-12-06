@@ -5,7 +5,7 @@ const User = require('../models/User')
 passport.use(new FacebookStrategy({
     clientID: process.env.CLIENT_ID_FB,
     clientSecret: process.env.CLIENT_SECRET_FB,
-    callbackURL: "http://157.230.91.18:4000/users/fbSignin/Valid"
+    callbackURL: "/uwoom.com/users/fbSignin/Valid"
   },
   function(accessToken, refreshToken, profile, done) {
     User.findOrCreate({facebookId: profile.id}, function(err, user) {

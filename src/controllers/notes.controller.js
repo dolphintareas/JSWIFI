@@ -5,7 +5,7 @@ const mailer = require('../config/notificaciones');
 
 
 notesCtrl.renderNoteForm = (req, res) => {
-    res.render('notes/new-note');
+    res.render('notes/new-note',{titlepage: 'Agrega una tarea'});
 };
 
 // notesCtrl.uploadFile = async(req,res)=>{
@@ -33,7 +33,7 @@ notesCtrl.createNewNote = async (req, res) => {
 
 notesCtrl.renderNotes = async (req, res) => {
     const notes = await Note.find({user: req.user.id}).sort({createdAt: 'desc'});
-    res.render('notes/all-notes', {notes});
+    res.render('notes/all-notes', {notes,titlepage: 'Pizarra digital Woom'});
 }
 
 notesCtrl.renderEditForm = async (req, res) => {
@@ -44,7 +44,7 @@ notesCtrl.renderEditForm = async (req, res) => {
         req.flash('error_msg', 'No tienes permisos para acceder, por favor inicia sesión')
         return res.redirect('/notes');
     }
-    res.render('notes/edit-note',{note})
+    res.render('notes/edit-note',{note, titlepage: 'Edita tu tarea'})
     
 };
 
