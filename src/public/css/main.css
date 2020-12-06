@@ -4,6 +4,10 @@ body{
    overflow-x: hidden;
 }
 
+.signinicon{          
+    color: #1fde82;
+    font-size: 20px;
+}
 .contactclass{
 transition: all 400ms ease;
 }
@@ -110,7 +114,15 @@ header::before{
 
 .claselogo {
     width: 78px;
-    vertical-align: top;
+    vertical-align: top; 
+    opacity: 0.9;
+}
+
+.claselogo:hover {
+   
+    opacity: 1;
+    width: 80px;
+   
 }
 
 .claselogo2 {
@@ -157,6 +169,14 @@ h1{
 .contenido-header{
     width: 100%;
     height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signuptranslate{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -940,19 +960,19 @@ h1{
             
         }
         .nav-main{
-            display: block;
+            display: flex;
             position: absolute;
             top: 0;
             left: 0;
-            height: 100vh;
+            
             width: 200px;
-            opacity: 0.8;
+            opacity: 0.95;
             transform: translateX(-200px);
             transition: all 0.5s ease-in-out;
             z-index: 2;
             align-items: center;
             flex-direction: column;
-            justify-content: space-evenly;
+            justify-content: flex-start;
            }
 
         .nav-main.show{
@@ -960,6 +980,32 @@ h1{
             
            
         }
+        .nav-main2{
+            height: 100vh;
+           
+           
+        }
+
+        .t1{
+         font-size: 15px;
+         color: royalblue;
+        }
+
+        .t2{
+            transform: translateY(-30px);
+        }
+        .t3{
+            transform: translateY(-75px);
+           
+        }
+        .t4{
+            transform: translateY(-120px);
+        }
+        .t5{
+            transform: translateY(-170px);
+           
+        }
+        
 
 
        
@@ -1230,7 +1276,7 @@ h1{
             transform: translateX(-20px);
         }
 
-        .sinupform{
+        .signupform{
             width: 90%;
         }
         
@@ -1238,5 +1284,13 @@ h1{
             width: 90%;
         }
 
+        .signintranslate{
+            transform: translateY(50px);
+        }
+
+        .signuptranslate{
+            transform: translateY(15px);
+            height: 900px;
+        }
         
     }

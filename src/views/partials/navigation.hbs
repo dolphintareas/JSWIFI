@@ -37,7 +37,7 @@
                             <a href="/cursos/add" class="nav-link">Abrir cursos</a>
                         </li>  
                         <li class="nav-item ">
-                            <a href="/users/payment" class="nav-link">Tienda</a>
+                            <a href="/users/payment" class="nav-link">Pagos</a>
                         </li>     
                     
                     {{#if user}}
@@ -79,29 +79,38 @@
 
 
 <div class="nav-main">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-main2">
 
-      
+      {{#if user}}
+                    <ul class="navbar-nav t1">
+                    <li class="nav-item ">
+                        {{user.name}}
+                    </li>
+                    </ul>                    
+                    {{/if}}
         
-        <ul class="navbar-nav mr-auto  ">
+        <ul class="navbar-nav t2">
         
                 <li class="nav-item ">
                     <a href="/" class="nav-link ">Inicio</a>
                 </li>
         </ul>
-        <ul class="navbar-nav mr-auto ">
+        <ul class="navbar-nav t3 ">
                 <li class="nav-item">
                     <a href="/about" class="nav-link ">Nosotros</a>
                 </li>
         </ul>
-        <ul class="navbar-nav mr-auto ">
+
+
+        
+        <ul class="navbar-nav t4 ">
                 <li class="nav-item">
                     <a href="/cursos/add" class="nav-link ">Abrir cursos</a>
                 </li>
         </ul>
-        <ul class="navbar-nav mr-auto ">
+        <ul class="navbar-nav t5 ">
                 <li class="nav-item">
-                    <a href="/users/payment" class="nav-link ">Tienda</a>
+                    <a href="/users/payment" class="nav-link ">Pagos</a>
                 </li>
         </ul>
    
@@ -109,26 +118,29 @@
 
 
      {{#if user}}
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Tareas
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/notes">Mis tareas</a>
-                        <a class="dropdown-item" href="/notes/add">Añadir tarea</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Tareas resueltas</a>
-                    </div>
-                </li>  
-                <li class="nav-item ">
-                        <a href="#" class="nav-link">Mis cursos</a>
-                    </li>
+    <div class="navbar-nav mr-auto ">
+         <ul class="navbar-nav mr-auto  ">
+                  
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/notes">Mis tareas</a>
+                        </li>
+                </ul>
+
+                <ul class="navbar-nav mr-auto  ">
+                  
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/notes/add">Añadir tarea</a>
+                        </li>
+                </ul>
+     
+            <ul class="navbar-nav mr-auto ">
+              
+                
                 <li class="nav-item ">
                         <a href="/users/logout" class="nav-link">Cerrar sesión</a>
                     </li>
             </ul>
+        </div>
 
     {{else}}
 
@@ -147,7 +159,9 @@
                
 
             </div>
-        {{/if}}       
+        {{/if}}  
+
+
 
 </nav>
 </div>
