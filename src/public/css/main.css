@@ -987,22 +987,22 @@ h1{
         }
 
         .t1{
-         font-size: 15px;
-         color: royalblue;
+         font-size: 12px;
+         color:royalblue;
         }
 
         .t2{
-            transform: translateY(-30px);
+            transform: translateY(-10px);
         }
         .t3{
-            transform: translateY(-75px);
+            transform: translateY(-60px);
            
         }
         .t4{
-            transform: translateY(-120px);
+            transform: translateY(-110px);
         }
         .t5{
-            transform: translateY(-170px);
+            transform: translateY(-160px);
            
         }
         
