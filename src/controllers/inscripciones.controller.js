@@ -13,12 +13,34 @@ inscripcionesCtrl.renderInscriptionForm = (req, res) => {
 
 //router.post('/cursos/inscribir', newInscription);
 inscripcionesCtrl.newInscription = async (req, res) =>{
-    
+    const errors = [];
+    const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     const {nombreinscr, emailinscr,contacto, nombre, cupon} = req.body;
+    if(!regexEmail.test(emailinscr)){
+        errors.push({text:'Ingresa un email válido'});  
+    }
+
+    if (errors.length>0){
+       
+        res.render('cursos/new-inscription',{
+            errors,
+            nombreinscr,
+            emailinscr,
+            contacto,
+            nombre,
+            cupon,
+        })
+    } else{
+        const emailUser = await Inscripcion.findOne({emailinscr: emailinscr});
+        if (emailUser) {
+            req.flash('error_msg', 'Este usuario ya ha sido registrado');
+            res.redirect('/cursos/inscripcion/MarvinRobot');
+        } else {
             const newInscription = new Inscripcion({nombreinscr, emailinscr,contacto, nombre, cupon});
             
             await newInscription.save();
             res.render('cursos/success-inscription',{newInscription, titlepage: 'Estás inscrito al curso'});
+    }}
 };
 
 //router.get('/cursos/inscripciones', allInscription);
