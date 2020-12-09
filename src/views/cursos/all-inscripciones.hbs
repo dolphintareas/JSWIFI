@@ -1,0 +1,63 @@
+<br>
+<div class="contenedor_loader">
+    <div class="loader"></div>
+</div>
+   
+    <div class="row mx-auto p-2 showfooter" >         
+                    <a href="/cursos/inscripcion/MarvinRobot"><i class="fa fa-plus" aria-hidden="true"></i> Crear Alumno </a>
+        </div> 
+
+
+<table class="table table-responsive table-striped p-4">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Curso</th>
+            <th>Cupon</th>
+            <th>Creado</th>
+            <th>Actualizado</th>
+            <th>Editar</th>
+            <th>Borrar</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each inscripciones}}  
+        <tr>
+             <td>{{_id}}</td>
+            <td>{{nombreinscr}}</td>
+            <td>{{emailinscr}}</td>
+            <td>{{contacto}}</td>
+            <td>{{nombre}}</td>
+            <td>{{cupon}}</td>
+            <td>{{createdAt}}</td>
+            <td>{{updatedAt}}</td>
+            <td><a href="/cursos/inscripciones/MarvinRobot/edit/{{_id}}"><i class="fa fa-pencil"></i></a></td>
+            <td><form action="/cursos/inscripciones/MarvinRobot/delete/{{_id}}?_method=DELETE" method="POST">
+                                <input type="hidden" name="_method" value="DELETE">
+                                <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+                            </form></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

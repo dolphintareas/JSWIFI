@@ -1,0 +1,36 @@
+<div class="col-md-4 mx-auto p-4">
+    <div class="card">
+        <div class="card-header">
+            <h3>Editar Alumno</h3>
+        </div>
+        <div class="card-body">
+            <form action="/cursos/inscripciones/MarvinRobot/edit/{{inscripcion.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT" required>
+                <div class="form-group">
+                    <input type="text" name="nombreinscr" placeholder="Nombre y apellidos" class="form-control" value="{{inscripcion.nombreinscr}}">
+                </div>
+                <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Correo" name="emailinscr" value="{{inscripcion.emailinscr}}" >
+                    </div>
+                
+                <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Número telefónico" name="contacto" value="{{inscripcion.contacto}}">
+                </div>
+                
+                <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Curso" name="nombre" value="{{inscripcion.nombre}}">
+                </div>
+
+                <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Digita tu cupón si cuentas con uno" name="cupon" value="{{inscripcion.cupon}}">
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,12 @@ body{
     color: #1fde82;
     font-size: 20px;
 }
+
+.inscriptionIcon{          
+    color: #eef106;
+    font-size: 20px;
+}
+
 .contactclass{
 transition: all 400ms ease;
 }
@@ -182,6 +188,14 @@ h1{
     align-items: center;
 }
 
+.successtranslate{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .contenido-header>img{
     width: 550px;
     animation: ease-in animat 1.5s;
@@ -331,6 +345,29 @@ h1{
     box-shadow: 0 8px 32px rgba(31, 222, 130,.46);
 }
 
+.textos-inscription a{
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: inline-block;
+    background: #416fd3;
+    text-align: center;
+    color: #fff;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(102, 161, 209, 0.46);
+}
+
+.textos-inscription a:hover{
+    color: rgba(22, 196, 240, 0.61);
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.46);
+}
+.altura{
+    height: 200px;
+}
 /**/
 
 .results{
@@ -519,6 +556,27 @@ h1{
 .userSignin:hover{
     color: rgba(209, 228, 99, 0.76);
     
+}
+
+.fondo{
+    width: 20%;
+    height: 330px;
+    background-color: transparent;
+    background: url('../img/pic.png') no-repeat center center/cover;
+
+ 
+   transform: translateX(200%);
+
+}
+
+.fondo2{
+    width: 20%;
+    height: 128px;
+    background-color: transparent;
+    background: url('../img/logomr.png') no-repeat center center/cover;
+
+ 
+    transform: translateX(200%);
 }
 
 
@@ -711,6 +769,16 @@ h1{
         border-radius: 10%;
     }
 
+    .linksMR a i{
+        transition: all ease-in-out .3s;
+    }
+
+    .linksMR a i:hover{
+        color: #e1eb53;
+        background-color: #fff ;
+        border-radius: 10%;
+    }
+
     .fa-css {
         padding: 15px;
         font-size: 18px;
@@ -745,6 +813,20 @@ h1{
     }
 
     .links a i {
+        font-size: 3rem;
+    }
+
+    .linksMR{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .linksMR a {
+        margin: 0 30px;
+    }
+
+    .linksMR a i {
         font-size: 3rem;
     }
 
@@ -1279,5 +1361,11 @@ h1{
             transform: translateY(15px);
             height: 900px;
         }
-        
+        .successtranslate{
+            transform: translateY(15px);
+            height: 200px;
+        }
+        .fondo, .fondo2, .iconosCursos{
+            display: none;
+        }
     }

@@ -1,21 +1,9 @@
 const{model, Schema} = require('mongoose')
 
-const cursoSchema = new Schema ({
+const InscripcionSchema = new Schema ({
     nombre: {
         type: String,
         required: true
-    },
-    precio: {
-        type:Number,
-        
-    },
-    inicio: {
-        type: String,
-      
-    },
-    contenido: {
-        type: String,
-
     },
     contacto:{
         type: String,
@@ -38,4 +26,4 @@ const cursoSchema = new Schema ({
     timestamps: true
 })
 
-module.exports = model('Curso', cursoSchema);
+module.exports = model('Inscripcion', InscripcionSchema);

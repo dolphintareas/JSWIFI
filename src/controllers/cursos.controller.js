@@ -4,6 +4,7 @@ const passport = require('passport');
 
 const Curso = require('../models/Curso')
 
+
 //router.post('/cursos/busquedas', findCourse);
 cursosCtrl.findCourse = (req, res) => {
     res.render('cursos/busquedas',{titlepage: 'Buscar curso'});
@@ -65,6 +66,9 @@ cursosCtrl.deleteCourse = async (req, res) => {
 cursosCtrl.renderFindCourse = async (req, res) => {    
     res.render('cursos/busquedas',{titlepage: 'Buscar curso'})
 };
+
+
+
 
 
 module.exports = cursosCtrl;
