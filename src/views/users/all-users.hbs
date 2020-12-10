@@ -30,39 +30,40 @@
     <thead>
         <tr>
             <th>Id</th>
+            
             <th>Nombre</th>
-            <th>Apellidos</th>
+    
             <th>Correo</th>
-            <th>Contraseña</th>
             <th>Teléfono</th>
-            <th>País</th>
-            <th>Creado</th>
-            <th>Actualizado</th>
-            <th>Rol</th>
+            <th>Ciudad</th>
+            
+            
+            <th>Tareas</th>
             <th>Editar</th>
             <th>Borrar</th>
-            <th>Tareas</th>
+            <th>Creado</th>
         </tr>
     </thead>
     <tbody>
         {{#each Users}}  
         <tr>
-             <td>{{_id}}</td>
-            <td>{{name}}</td>
-            <td>{{lastname}}</td>
+            <td>{{_id}}</td>
+            
+            <td>{{name}} {{lastname}}</td>
+     
             <td>{{email}}</td>
-            <td>{{password}}</td>
             <td>{{telefono}}</td>
             <td>{{pais}}</td>
-            <td>{{createdAt}}</td>
-            <td>{{updatedAt}}</td>
-            <td>{{roles}}</td>
+            
+            
+            <td><a href="/users/notes/{{_id}}"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
             <td><a href="/users/edit/{{_id}}"><i class="fa fa-pencil"></i></a></td>
             <td><form action="/users/delete/{{_id}}?_method=DELETE" method="POST">
                                 <input type="hidden" name="_method" value="DELETE">
                                 <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
                             </form></td>
-            <td><a href="/users/notes/{{_id}}"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></td>
+                            <td>{{createdAt}}</td>
+            
         </tr>
         {{/each}}
     </tbody>
