@@ -3,7 +3,13 @@
 <div class="contenedor_loader">
     <div class="loader"></div>
 </div>
-      
+
+<div class="p-2">
+    <p><i class="fa fa-user-circle" aria-hidden="true"></i> Tareas de {{onlyuser.name}}</p>
+    <a href="/users/response/{{onlyuser.id}}"><i class="fa fa-pencil"></i> Agregar una nota  </a> <br>
+    <a href="/users/all"><i class="fa fa-chevron-left" aria-hidden="true"></i> Regresar a Usuarios</a>
+</div> 
+
     <div class="row mx-auto "> 
       
             {{#each notes}}      
@@ -16,11 +22,13 @@
                             </h4>
                             <div style="font-size: 8px;">{{createdAt}}</div>
                             <hr>
+                            <p>User: {{user}} </p>
                             <p>Descripción: {{description}} </p>
                             Ubicación de la tarea: {{url}}
                             <br>
                             <br>
                             <p>Id: {{id}}</p>
+                            
                         
                         </div>
                     </div>

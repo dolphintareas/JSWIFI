@@ -1,4 +1,5 @@
 const express = require('express');
+const socketio = require('socket.io');
 const Handlebars = require('handlebars');
 const exphbs = require('express-handlebars');
 const path = require('path');

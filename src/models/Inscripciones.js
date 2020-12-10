@@ -7,7 +7,7 @@ const InscripcionSchema = new Schema ({
     },
     contacto:{
         type: String,
-        required: true
+        
     },
     nombreinscr:{
         type: String,

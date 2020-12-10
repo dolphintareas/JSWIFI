@@ -49,8 +49,29 @@ const Note = require('../models/Note')
     //router.get('/users/notes/:id', renderUserNotes);
     usersCtrl.renderUserNotes = async (req, res) => {
         const notes = await Note.find({user: req.params.id}).sort({createdAt: 'desc'});
-        res.render('users/users-notes', {notes, titlepage: 'Tareas de usuarios'});
+        const onlyuser = await User.findById(req.params.id);
+        res.render('users/users-notes', {notes, onlyuser, titlepage: 'Tareas de usuarios'});
     }
 
+    //Responder USUARIOS
+    //router.get('/users/response/:user', isAuthenticated,renderResponseForm);
+    usersCtrl.renderResponseForm = async (req, res) => {
+
+        const user = await User.findById(req.params.id);
+        
+        res.render('users/response-user',{user, titlepage: 'Responder usuario'})
+        
+    };
+    //router.post('/users/response/:user', isAuthenticated, createResponse);
+    usersCtrl.createResponse = async (req, res) => {
+        const {title, description} = req.body;
+        const newNote = new Note({title, description})
+        newNote.user = req.params.id;
+      
+        await newNote.save();
+        const usuario = await User.findById(req.params.id);
+        req.flash('success_msg', `Respuesta añadida satisfactoriamente para ${usuario.name} ${usuario.id}`);
+        res.redirect('/users/all')
+    }
 
 module.exports = usersCtrl;

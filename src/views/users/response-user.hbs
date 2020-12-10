@@ -1,0 +1,47 @@
+<br>
+<br>
+<section class="container">
+    <div class="row p-4 showfooter">
+        <div class="col-md-4 mx-auto">
+            <div class="card text-center cardh cursoform">
+                <div class="card-header">
+                    <h4>NUEVA NOTA</h4>
+                </div>
+                {{!-- <form action="/notes/new-note" method="POST"> --}}
+
+                <div class="card card-body">
+
+                    <form action="/users/response/{{user.id}}" method="POST" >
+                        <div class="form-group ">
+                            <input type="text" name="title"  class="form-control"
+                                placeholder="Nombre de la tarea" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="description"  placeholder="Descripción de la tarea"
+                                class="form-control"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success btn-block">
+                            ENVIAR
+                        </button>
+                        {{!-- <p class="d-none loading" >Espera mientras subimos tu tarea...</p> --}}
+                    </form>
+                </div>
+
+
+                {{!-- <div class="form-group">
+                <button class="btn btn-primary btn-block">
+                    Guardar mi tarea
+                </button>
+            </div> 
+        </form>--}}
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+
+</section>
