@@ -1,32 +1,91 @@
 
-<div class="fondo">
+
+<img src="img/logo.png" alt="">
+
+
+
+<div class="fondo"> 
+    <div class="fondoMR" id="MRimagenes">
+    </div> 
+    <div class="fondoPicc" id="MRimagenes1">
+    </div> 
+    <div class="fondoMatlab" id="MRimagenes2">
+    </div>  
+    <div class="fondoSolidworks" id="MRimagenes3">
+    </div>  
+    <div class="fondoInventor" id="MRimagenes4">
+    </div>  
+    <div class="fondoLabview" id="MRimagenes5">
+    </div>  
+    <div class="fondoTiaportal" id="MRimagenes6">
+    </div>  
+    <div class="fondoTekla" id="MRimagenes7">
+    </div>  
+    <div class="fondoAutocad" id="MRimagenes8">
+    </div>  
+    <div class="fondoPlant3d" id="MRimagenes9">
+    </div> 
 </div>
+
+
+
 
     <section class="questions main-contenedor altura iconosCursos">
         <section class="textos-inscription">
             <a href="#">Cursos:</a>
-            <a href="#">PIC C</a>
-            <a href="#">MATLAB</a>
-            <a href="#">SOLIDWORKS</a>
-            <a href="#">INVENTOR</a>
-            <a href="#">LABVIEW</a>
-            <a href="#">TIA PORTAL</a>
-            <a href="#">TEKLA</a>
-            <a href="#">AUTOCAD</a>
-            <a href="#">PLANT 3D</a>
-            <p><i class="fa fa-smile-o p-2" aria-hidden="true"></i> Llena el formulario para inscribirte a un curso <br>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoPicC" id="picc">PIC C</a>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoMatlab" id="matlab">MATLAB</a>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoSolidworks" id="solidworks">SOLIDWORKS</a>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoInventor" id="inventor">INVENTOR</a>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoLabview" id="labview">LABVIEW</a>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoTiaPortal" id="tiaportal">TIA PORTAL</a>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoTekla" id="tekla">TEKLA</a>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoAutocad" id="autocad">AUTOCAD</a>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoPlant3d" id="plant3d">PLANT 3D</a>
+            <p class="p-4"><i class="fa fa-smile-o p-2" aria-hidden="true"></i> Llena el formulario para inscribirte a un curso <br>
                <i class="fa fa-smile-o p-2" aria-hidden="true"></i> Una vez enviado el formulario, recibirás el link de acceso y horarios del curso</p>
         </section>
        
     </section>
 
+<div class="responsiveInscriptions p-4 ">
+<h3>Nuestros cursos: </h3>
+<hr>
+<ul >
+    <a href="/cursos/inscripciones/MarvinRobot/cursoPicC">PIC C</a>
+</ul>
+<ul >
+    <a href="/cursos/inscripciones/MarvinRobot/cursoMatlab">MATLAB</a>
+</ul>
+<ul >
+    <a href="/cursos/inscripciones/MarvinRobot/cursoSolidworks">SOLIDWORKS</a>
+</ul>
+<ul >
+    <a href="/cursos/inscripciones/MarvinRobot/cursoInventor">INVENTOR</a>
+</ul>
+<ul >
+    <a href="/cursos/inscripciones/MarvinRobot/cursoLabview">LABVIEW</a>
+</ul>
+<ul >
+    <a href="/cursos/inscripciones/MarvinRobot/cursoTiaPortal">TIA PORTAL</a>
+</ul>
+<ul >
+    <a href="/cursos/inscripciones/MarvinRobot/cursoTekla">TEKLA</a>
+</ul>
+<ul >
+    <a href="/cursos/inscripciones/MarvinRobot/cursoAutocad" >AUTOCAD</a>
+</ul>
+<ul >
+    <a href="/cursos/inscripciones/MarvinRobot/cursoPlant3d">PLANT 3D</a>
+</ul>
+</div>
 
 <div class="row  p-4">
     <div class="col-md-3 mx-auto car">
         <div class="card cardh cursoform">
            
             <div class="card-header">
-                Registrar cursos
+                Registrarme en un curso
             </div>
             <div class="card-body">
                 <form action="/cursos/inscripcion/MarvinRobot" method="POST">
@@ -43,8 +102,8 @@
                         <input type="text" class="form-control" name="contacto" placeholder="Celular/Teléfono" value="{{contacto}}">
                     </div>
                     <div class="form-group">
-                        <label for="nombre">Nombre del curso</label>
-                        <input type="text" class="form-control" name="nombre" placeholder="Curso" value="{{nombre}}" required>
+                        <label for="nombre">Código de curso</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Código de curso" value="{{nombre}}" required>
                     </div>
                     <div class="form-group">
                         <label for="nombre">Cupón</label>
@@ -76,3 +135,119 @@
 <br>
 <a href="https://api.whatsapp.com/send?phone=51990012243" class="btn-wsp" target="blank"><i class="fa fa-whatsapp" aria-hidden="true"></i>
 </a>
+
+
+
+<script>
+    const MRimagenes = document.getElementById("MRimagenes");
+    const MRimagenes1 = document.getElementById("MRimagenes1");
+    const MRimagenes2 = document.getElementById("MRimagenes2");
+    const MRimagenes3 = document.getElementById("MRimagenes3");
+    const MRimagenes4 = document.getElementById("MRimagenes4");
+    const MRimagenes5 = document.getElementById("MRimagenes5");
+    const MRimagenes6 = document.getElementById("MRimagenes6");
+    const MRimagenes7 = document.getElementById("MRimagenes7");
+    const MRimagenes8 = document.getElementById("MRimagenes8");
+    const MRimagenes9 = document.getElementById("MRimagenes9");
+
+    const picc = document.querySelector("#picc");
+    const matlab = document.querySelector("#matlab");
+    const solidworks = document.querySelector("#solidworks");
+    const inventor = document.querySelector("#inventor");
+    const labview = document.querySelector("#labview");
+    const tiaportal = document.querySelector("#tiaportal");
+    const tekla = document.querySelector("#tekla");
+    const autocad = document.querySelector("#autocad");
+    const plant3d = document.querySelector("#plant3d");
+
+    picc.addEventListener('mouseover', (e)=>{
+        MRimagenes.style.display = 'none';
+        MRimagenes1.style.display = 'block';
+    })
+     picc.addEventListener('mouseout', (e)=>{
+        MRimagenes1.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
+
+
+    matlab.addEventListener('mouseover', (e)=>{
+        MRimagenes.style.display = 'none';
+        MRimagenes2.style.display = 'block';
+        
+    })
+    matlab.addEventListener('mouseout', (e)=>{
+        MRimagenes2.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
+
+
+    solidworks.addEventListener('mouseover', (e)=>{
+        MRimagenes.style.display = 'none';
+        MRimagenes3.style.display = 'block';
+    })
+    solidworks.addEventListener('mouseout', (e)=>{
+        MRimagenes3.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
+
+
+     inventor.addEventListener('mouseover', (e)=>{
+         MRimagenes.style.display = 'none';
+        MRimagenes4.style.display = 'block';
+    })
+    inventor.addEventListener('mouseout', (e)=>{
+        MRimagenes4.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
+
+
+     labview.addEventListener('mouseover', (e)=>{
+         MRimagenes.style.display = 'none';
+        MRimagenes5.style.display = 'block';
+    })
+    labview.addEventListener('mouseout', (e)=>{
+        MRimagenes5.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
+
+
+
+     tiaportal.addEventListener('mouseover', (e)=>{
+         MRimagenes.style.display = 'none';
+        MRimagenes6.style.display = 'block';
+    })
+    tiaportal.addEventListener('mouseout', (e)=>{
+        MRimagenes6.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
+
+
+     tekla.addEventListener('mouseover', (e)=>{
+         MRimagenes.style.display = 'none';
+        MRimagenes7.style.display = 'block';
+    })
+    tekla.addEventListener('mouseout', (e)=>{
+        MRimagenes7.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
+
+
+     autocad.addEventListener('mouseover', (e)=>{
+         MRimagenes.style.display = 'none';
+        MRimagenes8.style.display = 'block';
+    })
+    autocad.addEventListener('mouseout', (e)=>{
+        MRimagenes8.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
+
+
+    plant3d.addEventListener('mouseover', (e)=>{
+        MRimagenes.style.display = 'none';
+        MRimagenes9.style.display = 'block';
+    })
+    plant3d.addEventListener('mouseout', (e)=>{
+        MRimagenes9.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
+</script>

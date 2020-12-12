@@ -31,6 +31,14 @@ app.engine('.hbs', exphbs({
 }));
 app.set('view engine', '.hbs');
 
+
+
+//Static files
+
+app.use(express.static(path.join(__dirname,'public')));
+
+
+
 //Middlewares
 app.use(morgan('dev'));
 app.use(express.json());
@@ -45,6 +53,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
+
+
 //Global Variables
 app.use((req, res, next) =>{
     res.locals.success_msg = req.flash('success_msg');
@@ -54,17 +64,18 @@ app.use((req, res, next) =>{
     next();
 });
 
+
+
 //Routes
+app.use(require('./routes/inscripciones.routes'));
 app.use(require('./routes/index.routes'));
 app.use(require('./routes/auth.routes'));
 app.use(require('./routes/notes.routes'));
 app.use(require('./routes/users.routes'));
 app.use(require('./routes/cursos.routes'));
-app.use(require('./routes/inscripciones.routes'));
 
 
 
-//Static files
-app.use(express.static(path.join(__dirname,'public')));
+
 
 module.exports = app;

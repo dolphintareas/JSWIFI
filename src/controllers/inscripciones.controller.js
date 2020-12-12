@@ -74,4 +74,44 @@ inscripcionesCtrl.deleteInscription = async (req, res) => {
     res.redirect('/cursos/inscripciones')
 }
 
+//cursos
+
+//cursoPiC, cursoMatlab, cursoSolidworks, cursoInventor, cursoLabview, cursoTiaPortal, cursoTekla, cursoAutocad, cursoPlant3d
+inscripcionesCtrl.cursoPiC = (req, res) => { 
+    res.render('cursos/infoPicC',{titlepage: 'Temario de Curso Microcontroladores con PIC C'});
+}
+
+inscripcionesCtrl.cursoMatlab = (req, res) => { 
+    res.render('cursos/infoMatlab',{titlepage: 'Temario de Curso Matlab'});
+}
+
+inscripcionesCtrl.cursoSolidworks = (req, res) => { 
+    res.render('cursos/infoSolidworks',{titlepage: 'Temario de Curso Solidworks'});
+}
+
+inscripcionesCtrl.cursoInventor = (req, res) => { 
+    res.render('cursos/infoInventor',{titlepage: 'Temario de Curso Inventor'});
+}
+
+inscripcionesCtrl.cursoLabview = (req, res) => { 
+    res.render('cursos/infoLabview',{titlepage: 'Temario de Curso Labview'});
+}
+
+inscripcionesCtrl.cursoTiaPortal = (req, res) => { 
+    res.render('cursos/infoTiaportal',{titlepage: 'Temario de Curso Tia Portal'});
+}
+
+inscripcionesCtrl.cursoTekla = (req, res) => { 
+    res.render('cursos/infoTekla',{titlepage: 'Temario de Curso Tekla'});
+}
+
+inscripcionesCtrl.cursoAutocad = (req, res) => { 
+    res.render('cursos/infoAutocad',{titlepage: 'Temario de Curso Autocad'});
+}
+
+inscripcionesCtrl.cursoPlant3d = (req, res) => { 
+    res.render('cursos/infoPlant3d',{titlepage: 'Temario de Curso Plant 3d'});
+}
+
+
 module.exports = inscripcionesCtrl;

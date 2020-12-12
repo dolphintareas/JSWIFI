@@ -13,4 +13,5 @@ indexCtrl.renderContact = (req, res)=>{
     res.render('contacto',{titlepage: 'Woom! Aprende ahora'})
 };
 
+
 module.exports = indexCtrl;
