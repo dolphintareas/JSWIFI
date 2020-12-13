@@ -1,25 +1,24 @@
-
-<p class="p-4">
-    <i class="fa fa-smile-o p-2" aria-hidden="true"></i> En esta sección puedes proponer un tema o un curso en el que estés interesado tú o un grupo de amigos. <br>
-    <i class="fa fa-smile-o p-2" aria-hidden="true"></i> Los datos que ingreses serán referenciales para asignar un tutor. <br>
-    <i class="fa fa-smile-o p-2" aria-hidden="true"></i> Inscribete a un curso de Marvin Robot <a href="/cursos/inscripcion/MarvinRobot">Aquí</a>
+<div class="responsiveInscriptions p-4 ">
+    <div class="fondoNewCurso">
+    </div> 
+</div>
+<p class="advices p-4">
+    <i class="fa fa-info-circle" aria-hidden="true"></i> En esta sección puedes proponer un tema o un curso en el que estés interesado tú o un grupo de amigos. <br>
+    <i class="fa fa-info-circle" aria-hidden="true"></i> Los datos que ingreses serán referenciales para asignar un tutor. <br>
+    <br>
 </p>
 <div class="row  p-4">
     <div class="col-md-3 mx-auto car">
         <div class="card cardh cursoform">
            
             <div class="card-header">
-                Registrar cursos
+                Agenda tu clase
             </div>
             <div class="card-body">
                 <form action="/cursos/add" method="POST">
                     <div class="form-group">
-                        <label for="nombre">Nombre del curso</label>
-                        <input type="text" class="form-control" name="nombre" placeholder="Nombre" value="{{nombre}}" required autofocus>
-                    </div>
-                    <div class="form-group">
-                        <label for="precio">Costo del curso</label>
-                        <input type="number" class="form-control" name="precio" placeholder="S/. Monto aprox." value="{{precio}}" >
+                        <label for="nombre">Nombres</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Ingresa tu nombre" value="{{nombre}}" required autofocus>
                     </div>
                     <div class="form-group">
                         <label for="inicio">Fecha de inicio del curso</label>
@@ -30,8 +29,8 @@
                         <input type="number" class="form-control" name="contacto" placeholder="Celular/Teléfono" value="{{contacto}}" required>
                     </div>
                     <div class="form-group">
-                            <label for="contenido">Agrega alguna descripción del curso</label>
-                            <textarea name="contenido" placeholder="Contenido del curso" class="form-control" value ="{{contenido}}"required></textarea>
+                            <label for="contenido">Agrega alguna descripción del clase</label>
+                            <textarea name="contenido" placeholder="Contenido del curso o tema que solicitas explicación" class="form-control" value ="{{contenido}}"required></textarea>
                     </div>
                     <button class="btn btn-primary btn-block">
                         Crear

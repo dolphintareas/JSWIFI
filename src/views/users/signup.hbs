@@ -1,14 +1,18 @@
 
+<div class="responsiveInscriptions p-4 ">
+    <div class="fondoNewCurso">
+    </div> 
+</div>
 <div class="main-contenedor ">
 <br>
     <section class="contenido-header signuptranslate">
                 <section class="textos-header">
                     <h1>Bienvenido a </h1> <h1>Woom</h1>
                     <p>
-                        <i class="fa fa-hand-o-right signinicon" aria-hidden="true"></i> Woom te ofrece una plataforma innovadora<br>
-                        <i class="fa fa-hand-o-right signinicon" aria-hidden="true"></i> Tutores disponibles las 24 horas <br>
-                        <i class="fa fa-hand-o-right signinicon" aria-hidden="true"></i> Explicaciones dinámica y amenas  <br>
-                        <i class="fa fa-hand-o-right signinicon" aria-hidden="true"></i> Mejora tu rendimiento académico<br> 
+                        
+                        <i class="fa fa-hand-o-right signinicon" aria-hidden="true"></i> Ten en cuenta que el correo que registres te servirá para iniciar sesión <br>
+                        <i class="fa fa-hand-o-right signinicon" aria-hidden="true"></i> Una vez subas una tarea te contáctaremos al correo o whatsapp del número que registres <i class="fa fa-info-circle red" aria-hidden="true"></i><br>
+                        <i class="fa fa-hand-o-right signinicon" aria-hidden="true"></i> Puedes acceder al boton de Whatsapp de la parte inferior derecha para mas información <br> 
                     </p>
     </section>
 
@@ -21,7 +25,7 @@
                 Registrate
             </div>
             <div class="card-body">
-                <form action="/users/signup" method="POST" id="signupform">
+                <form action="/users/signup" method="POST" id="signupform captcha-form">
                     <div class="form-group">
                         <input type="text" class="form-control" name="name" placeholder="Nombres" value="{{name}}" id="signupname" autofocus required>
                     </div>
@@ -49,7 +53,7 @@
                     <div class="form-group">
                         <input type="text" class="form-control" name="roles" placeholder="roles" value="{{roles}}" style="display: none;">
                     </div>
-
+                    <div class="g-recaptcha" data-sitekey="6LerMgQaAAAAAHS8wl9k52qupXi-inJDispXTK2u"></div>
                     <button class="btn btn-primary btn-block">
                         Registrar
                     </button>
@@ -70,3 +74,5 @@
 <br>
 <br>
 <br> 
+<a href="https://api.whatsapp.com/send?phone=51990012243" class="btn-wsp" target="blank"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+</a>

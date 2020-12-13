@@ -3,6 +3,9 @@ body{
    overflow-x: hidden;
 }
 
+.red{
+    color: red;
+}
 .temario{
     align-items: center ;
     text-align: center;
@@ -38,7 +41,7 @@ body{
 }
 
 .signinicon{          
-    color: #1fde82;
+    color: #4930d6cc;
     font-size: 20px;
 }
 
@@ -127,7 +130,7 @@ header::before{
 }
 
 .navizq{
- width: 500px;
+ width: 200px;
   
     justify-content: left;
 
@@ -550,6 +553,17 @@ h1{
     background: url('../img/fondo.png') no-repeat center center/cover;
     
 
+}
+
+.fondoNewCurso{
+
+display: none;
+justify-content: space-between;
+align-items: center;
+    width: 69%;
+    height: 46px;
+    background-color: transparent;
+    
 }
 
 .fondoPicc{
@@ -1009,7 +1023,8 @@ h1{
         }
 
         .textos-header{
-            margin:0;
+            padding-top: 20px;
+            margin: 5px;
         }
 
         /*about us*/
@@ -1151,11 +1166,13 @@ h1{
  
         }
         .responsiveInscriptions h3{
-            color: royalblue;
-            
-            width: 100%;
-            
-            
+            color: white;
+          background-color: rgba(65, 105, 225, 0.733);
+            padding: 20px;
+            margin: 10px;
+            width: 80%;
+            border-radius: 1em;
+            box-shadow: 0 8px 32px rgba(31, 82, 222, 0.46);
             transform: translateY(-10%);
         }
 
@@ -1163,12 +1180,22 @@ h1{
         margin-top: 8px;
             padding: 5px;
             text-decoration: none;
-            background-color: royalblue;
-            color: white;
-            border: 2px solid royalblue;
+            background-color: rgba(158, 158, 158, 0.11);
+            color: black;
+            border: 2px solid black;
             border-radius: 1em;
             
+            
         }
+
+        .responsiveInscriptions ul i{
+            
+             
+                color: black;
+                font-size: 20px;
+                
+                
+            }
 
         .cursoform{
             transform: translateY(-20%);
@@ -1442,5 +1469,28 @@ h1{
         }
         .fondo, .fondo2, .iconosCursos{
             display: none;
+        }
+
+        .fondoMR{
+            display: block;
+            height: 100px;
+            width: 100%;
+            transform: translateY(-50%);
+            
+            
+        
+        }
+        .advices{
+            transform: translateY(-30%);
+        }
+
+        .fondoNewCurso{
+display: block;
+      
+            background: url('../img/rlogo.png') no-repeat center center/cover;
+            
+            
+            
+        
         }
     }
