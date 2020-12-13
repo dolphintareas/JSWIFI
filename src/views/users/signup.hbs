@@ -53,8 +53,8 @@
                     <div class="form-group">
                         <input type="text" class="form-control" name="roles" placeholder="roles" value="{{roles}}" style="display: none;">
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LerMgQaAAAAAHS8wl9k52qupXi-inJDispXTK2u"></div>
-                    <button class="btn btn-primary btn-block">
+                    
+                    <button class="btn btn-primary btn-block g-recaptcha" data-sitekey="6LerMgQaAAAAAHS8wl9k52qupXi-inJDispXTK2u" data-callback='onSubmit' data-action='submit'>
                         Registrar
                     </button>
                     <p class="warnings" id="signupwarnings"></p>
@@ -76,3 +76,10 @@
 <br> 
 <a href="https://api.whatsapp.com/send?phone=51990012243" class="btn-wsp" target="blank"><i class="fa fa-whatsapp" aria-hidden="true"></i>
 </a>
+ <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  <script>
+   function onSubmit(token) {
+     document.getElementById("captcha-form").submit();
+   }
+ </script>
