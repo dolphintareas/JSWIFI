@@ -585,7 +585,7 @@ box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
 
 
 .store>h4{
-    color: #black;
+    color: black;
     font-size: 20px;
     padding-left: 40px;
 }
@@ -886,6 +886,26 @@ align-items: center;
       display: flex;
       max-width: 1100px;
   }
+
+  
+            /**/
+            .signupcardh{
+                width: 100%;
+                margin: 5px;
+                border-radius: 6px;
+                overflow: hidden;
+                background: #fff;
+                box-shadow: 0px 1px 10px rgba(0,0,0, 0.2);
+                cursor: default;
+               
+            }
+
+            .signupcardh:hover{
+            box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
+        
+            }
+
+            /**/
 
   .cardh{
       width: 100%;
@@ -1381,6 +1401,7 @@ align-items: center;
         /**/
         .responsiveInscriptions{
            display: block;
+           height: 100px;
             transform: translateY(-15%);
  
         }
@@ -1669,12 +1690,14 @@ align-items: center;
         }
 
         .siginform{
-            width: 90%;
-            transform: translateX(-20px);
+            width: 80%;
+            transform: translateY(-80%);
         }
 
         .signupform{
-            width: 90%;
+            width: 80%;
+
+            transform: translateY(-40%);
         }
         
         .cursoform{
@@ -1685,9 +1708,9 @@ align-items: center;
             transform: translateY(50px);
         }
 
-        .signuptranslate{
-            transform: translateY(15px);
-            height: 900px;
+        .signupHeader{
+         
+            transform: translateY(50px);
         }
         .successtranslate{
             transform: translateY(15px);
@@ -1711,15 +1734,23 @@ align-items: center;
         }
 
         .fondoNewCurso{
+
 display: block;
-      
+       width: 55%;
+    height: 50px;
             background: url('../img/rlogo.png') no-repeat center center/cover;
 
         }
 
         .main-contenedor{
-            height: 600px;
+            height: 680px;
             }
+
+        .signupContenedor{
+            height: 1000px  ;
+            transform: translateY(-7%);
+        }
+
         .contenido-header{
             height: 1800px;
             transform: translateY(-20%);
@@ -1740,5 +1771,6 @@ display: block;
                 height: 80%;
             }
             
+
            
     }
