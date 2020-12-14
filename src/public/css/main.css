@@ -3,6 +3,8 @@ body{
    overflow-x: hidden;
 }
 
+
+
 .red{
     color: red;
 }
@@ -1137,6 +1139,26 @@ align-items: center;
     }
 
 
+
+    /**/
+
+    .cssPassword>a{
+        margin: 0 0 0 0;
+        width: fit-content;
+        display: inline-block;
+        background:transparent;
+        text-align: left;
+        color: #616161;
+        padding: 0 0;
+        text-decoration: none;
+        font-weight: 400;
+        text-transform: inherit;
+        font-size: 14px;
+        border-radius: none;
+        box-shadow: none;
+    };
+
+  
 /**/
 
 
@@ -1195,7 +1217,9 @@ align-items: center;
     }
     40%{
         box-shadow: 0 2.5em 0 0;
-    }
+    };
+
+   
 }
 
    
@@ -1401,7 +1425,8 @@ align-items: center;
         /**/
         .responsiveInscriptions{
            display: block;
-           height: 100px;
+           height:  100%;
+           width: 100%;
             transform: translateY(-15%);
  
         }
@@ -1690,12 +1715,12 @@ align-items: center;
         }
 
         .siginform{
-            width: 80%;
-            transform: translateY(-80%);
+            width: 90%;
+            transform: translate(0, -80%);
         }
 
         .signupform{
-            width: 80%;
+            width: 90%;
 
             transform: translateY(-40%);
         }
@@ -1708,6 +1733,11 @@ align-items: center;
             transform: translateY(50px);
         }
 
+        .signinContenedor{
+           
+            transform: translateY(-10%);
+        }
+        
         .signupHeader{
          
             transform: translateY(50px);
@@ -1736,8 +1766,9 @@ align-items: center;
         .fondoNewCurso{
 
 display: block;
-       width: 55%;
-    height: 50px;
+       width: 270px;
+    height: 60px;
+    padding: 10px 0;
             background: url('../img/rlogo.png') no-repeat center center/cover;
 
         }
