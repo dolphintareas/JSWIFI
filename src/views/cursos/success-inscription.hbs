@@ -1,20 +1,27 @@
- <div class="p-4">  <h1> Hola,</h1> <h3>  {{newInscription.nombreinscr}}</h3>  <a href="/cursos/inscripcion/MarvinRobot"><i class="fa fa-chevron-left" aria-hidden="true"></i> Volver a Cursos</a></div>
-<hr>
-  <div > <section class="contenido-header successtranslate ">
-                <section class="textos-header">
-                      
-                    <h2>Inscripción realizada</h2>
-                    <p>
-                        <i class="fa fa-hand-o-right inscriptionIcon" aria-hidden="true"></i> Te inscribiste al curso {{newInscription.nombre}}<br>
-                        <i class="fa fa-hand-o-right inscriptionIcon" aria-hidden="true"></i> El curso inicia el viernes 18 de diciembre<br>
-                        <i class="fa fa-hand-o-right inscriptionIcon" aria-hidden="true"></i> El precio del curso es GRATUITO<br>                        
-                        <i class="fa fa-hand-o-right inscriptionIcon" aria-hidden="true"></i> Información del curso será enviada a {{newInscription.emailinscr}} <br>
-                    </p>
-                    
-    </section>
- </div>    
+ <div class="p-4">  <h1> Hola,</h1> <h3>  {{newInscription.nombreinscr}}</h3>  <hr></div>
 
-<div>
+  <div > 
+    <section class="contenido-header successtranslate inscriptionVolver">
+        <section class="textos-header inscriptionlink">
+                
+            <h2>Tu inscripción ha sido realizada satisfactoriamente</h2>
+            <p>
+                <i class="fa fa-hand-o-right inscriptionIcon" aria-hidden="true"></i> Te inscribiste al curso {{newInscription.nombre}}<br>
+                <i class="fa fa-hand-o-right inscriptionIcon" aria-hidden="true"></i> La información del curso será enviada a {{newInscription.emailinscr}} <br>
+                <i class="fa fa-hand-o-right inscriptionIcon" aria-hidden="true"></i> Si ingresaste un cupón te enviaremos el link de acceso a la clase vía email o al Whatsapp {{newInscription.contacto}}<br>                        
+                <p> <i class="fa fa-info-circle" aria-hidden="true"></i> Si el curso tiene un costo <a href="/payment#pagos">realiza el pago </a> y envía el boucher a nuestro Whatsapp</p><br>
+            </p>
+                    
+        </section>
+    </section>
+    <div class=" p-4">
+        <a href="/cursos/inscripcion/MarvinRobot"><i class="fa fa-chevron-left" aria-hidden="true"></i> Volver a Cursos</a>
+    </div>
+ </div>    
+ 
+
+
+<div class="mfondo2">
 <section class="fondo2"> 
 </section>
 

@@ -31,16 +31,12 @@ inscripcionesCtrl.newInscription = async (req, res) =>{
             cupon,
         })
     } else{
-        const emailUser = await Inscripcion.findOne({emailinscr: emailinscr});
-        if (emailUser) {
-            req.flash('error_msg', 'Este usuario ya ha sido registrado');
-            res.redirect('/cursos/inscripcion/MarvinRobot');
-        } else {
+       
             const newInscription = new Inscripcion({nombreinscr, emailinscr,contacto, nombre, cupon});
             
             await newInscription.save();
             res.render('cursos/success-inscription',{newInscription, titlepage: 'Estás inscrito al curso'});
-    }}
+    }
 };
 
 //router.get('/cursos/inscripciones', allInscription);
@@ -111,6 +107,10 @@ inscripcionesCtrl.cursoAutocad = (req, res) => {
 
 inscripcionesCtrl.cursoPlant3d = (req, res) => { 
     res.render('cursos/infoPlant3d',{titlepage: 'Temario de Curso Plant 3d'});
+}
+
+inscripcionesCtrl.cursoArduino = (req, res) => { 
+    res.render('cursos/infoArduino',{titlepage: 'Temario de Curso Arduino'});
 }
 
 

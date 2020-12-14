@@ -2,7 +2,7 @@ const {Router} = require('express');
 const router = Router();
 
 const {renderInscriptionForm, newInscription, allInscription, renderEditInscription, updateInscription, deleteInscription, cursoPiC, cursoMatlab,
-    cursoSolidworks, cursoInventor, cursoLabview, cursoTiaPortal, cursoTekla, cursoAutocad, cursoPlant3d} = require ('../controllers/inscripciones.controller')
+    cursoSolidworks, cursoInventor, cursoLabview, cursoTiaPortal, cursoTekla, cursoAutocad, cursoPlant3d, cursoArduino} = require ('../controllers/inscripciones.controller')
 const {isModerador, isAuthenticated} = require('../helpers/auth');
 
 
@@ -34,5 +34,6 @@ router.get('/cursos/inscripciones/MarvinRobot/cursoTiaPortal', cursoTiaPortal);
 router.get('/cursos/inscripciones/MarvinRobot/cursoTekla', cursoTekla);
 router.get('/cursos/inscripciones/MarvinRobot/cursoAutocad', cursoAutocad);
 router.get('/cursos/inscripciones/MarvinRobot/cursoPlant3d', cursoPlant3d);
+router.get('/cursos/inscripciones/MarvinRobot/cursoarduino', cursoArduino);
 
 module.exports = router;

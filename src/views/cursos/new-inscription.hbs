@@ -23,6 +23,8 @@
     </div>  
     <div class="fondoPlant3d" id="MRimagenes9">
     </div> 
+    <div class="fondoArduino" id="MRimagenes10">
+    </div> 
 </div>
 
 
@@ -33,6 +35,7 @@
             <a href="#">Cursos:</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoPicC" id="picc">PIC C</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoMatlab" id="matlab">MATLAB</a>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoArduino" id="arduino">Arduino</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoSolidworks" id="solidworks">SOLIDWORKS</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoInventor" id="inventor">INVENTOR</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoLabview" id="labview">LABVIEW</a>
@@ -56,7 +59,7 @@
     <div class="col-md-3 mx-auto car">
         <div class="card cardh cursoform">
            
-            <div class="card-header">
+            <div class="card-header" id="registroCurso">
                 Registrarme en un curso
             </div>
             <div class="card-body">
@@ -74,12 +77,12 @@
                         <input type="text" class="form-control" name="contacto" placeholder="Celular/Teléfono" value="{{contacto}}">
                     </div>
                     <div class="form-group">
-                        <label for="nombre">Código de curso</label>
-                        <input type="text" class="form-control" name="nombre" placeholder="Código de curso" value="{{nombre}}" required>
+                        <label for="nombre">Nombre de curso</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="Nombre de curso" value="{{nombre}}" required>
                     </div>
                     <div class="form-group">
                         <label for="nombre">Cupón</label>
-                        <input type="text" class="form-control" name="cupon" placeholder="Digita tu cupón si cuentas con uno" value="{{cupon}}">
+                        <input type="text" class="form-control" name="cupón" placeholder="Digita tu cupón si cuentas con uno" value="{{cupon}}">
                     </div>
                     <button class="btn btn-primary btn-block">
                         Inscribirme
@@ -135,9 +138,6 @@
 <div class="fb-comments" data-href="http://localhost:4000/cursos/add" data-numposts="5" data-width="100%">
 </div>
 </div>
-<a href="https://api.whatsapp.com/send?phone=51937875282" class="btn-wsp" target="blank"><i class="fa fa-whatsapp"
-        aria-hidden="true"></i>
-</a>
 <br>
 <br>
 <br>
@@ -161,6 +161,7 @@
     const MRimagenes7 = document.getElementById("MRimagenes7");
     const MRimagenes8 = document.getElementById("MRimagenes8");
     const MRimagenes9 = document.getElementById("MRimagenes9");
+    const MRimagenes10 = document.getElementById("MRimagenes10");
 
     const picc = document.querySelector("#picc");
     const matlab = document.querySelector("#matlab");
@@ -171,6 +172,7 @@
     const tekla = document.querySelector("#tekla");
     const autocad = document.querySelector("#autocad");
     const plant3d = document.querySelector("#plant3d");
+    const arduino = document.querySelector("#arduino");
 
     picc.addEventListener('mouseover', (e)=>{
         MRimagenes.style.display = 'none';
@@ -253,6 +255,14 @@
         MRimagenes.style.display = 'block';
     })
 
+    arduino.addEventListener('mouseover', (e)=>{
+         MRimagenes.style.display = 'none';
+        MRimagenes10.style.display = 'block';
+    })
+    arduino.addEventListener('mouseout', (e)=>{
+        MRimagenes10.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
 
     plant3d.addEventListener('mouseover', (e)=>{
         MRimagenes.style.display = 'none';

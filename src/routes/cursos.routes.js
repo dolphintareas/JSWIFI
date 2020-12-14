@@ -1,7 +1,7 @@
 const {Router} = require('express');
 const router = Router();
 
-const {findCourse, showCourses, renderCoursesForm, newCourse, renderEditCourse, updateCourse, deleteCourse, renderInscriptionForm, newInscription, allInscription} = require ('../controllers/cursos.controller')
+const {findCourse, showCourses, renderCoursesForm, newCourse, renderEditCourse, updateCourse, deleteCourse, renderPaymentForm, Payment, renderWoomStoreForm, WoomStore} = require ('../controllers/cursos.controller')
 const {isModerador} = require('../helpers/auth');
 
 
@@ -23,7 +23,16 @@ router.put('/cursos/edit/:id', isModerador, updateCourse);
 // Delete Curso
 router.delete('/cursos/delete/:id', isModerador, deleteCourse);
 
+//medios de pago
 
+router.get('/payment', renderPaymentForm);
+
+router.post('/payment', Payment);
+
+//woomstore
+router.get('/woomstore', renderWoomStoreForm);
+
+router.post('/woomstore', WoomStore);
 
 //router.get('/users/signup', renderSignUpForm);
 //router.post('/users/signup', signup);

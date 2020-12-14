@@ -13,7 +13,8 @@ authCtrl.renderSignUpForm = (req, res) => {
 authCtrl.signup = async (req, res) =>{
     const errors = [];
     const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    const {name, lastname, email, telefono, pais, password, confirm_password, roles} = req.body;
+    const {name, lastname, email, telefono, pais, password, confirm_password , roles} = req.body;
+    
     if(name.length < 3){
         errors.push({text:'Ingresa un nombre válido'});  
     }
@@ -28,6 +29,9 @@ authCtrl.signup = async (req, res) =>{
     if (password.length < 8) {
         errors.push({text: 'Tu contraseña debe tener mínimo 8 caracteres'});
     }
+
+
+   
     if (errors.length>0){
         res.render('users/signup',{
             errors,
@@ -105,16 +109,6 @@ authCtrl.signup = async (req, res) =>{
         res.redirect('/users/signin');
     }
 
-    //router.get('/users/payment', renderPaymentForm);
-    authCtrl.renderPaymentForm = (req, res) => {
-        
-        res.render('users/payment',{titlepage: 'Medios de pago Woom'});
-    }
-
-    //router.post('/users/payment', Payment);
-    authCtrl.Payment = (req, res) => {
-     
-    }
-
+   
   
     module.exports = authCtrl;

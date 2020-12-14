@@ -69,6 +69,27 @@ cursosCtrl.renderFindCourse = async (req, res) => {
 
 
 
+ //router.get('/payment', renderPaymentForm);
+ cursosCtrl.renderPaymentForm = (req, res) => {
+        
+    res.render('cursos/payment',{titlepage: 'Medios de pago Woom'});
+}
+
+//router.post('/payment', Payment);
+cursosCtrl.Payment = (req, res) => {
+ 
+}
+
+ //router.get('/woomstore', renderWoomStoreForm);
+ cursosCtrl.renderWoomStoreForm = (req, res) => {
+        
+    res.render('cursos/woomstore',{titlepage: 'Tienda Virtal WoomStore'});
+}
+
+//router.post('/woomstore', Payment);
+cursosCtrl.WoomStore = (req, res) => {
+ 
+}
 
 
 module.exports = cursosCtrl;

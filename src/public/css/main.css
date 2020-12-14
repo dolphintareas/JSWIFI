@@ -46,7 +46,7 @@ body{
 }
 
 .inscriptionIcon{          
-    color: #eef106;
+    color: #4930d6cc;
     font-size: 20px;
 }
 
@@ -199,7 +199,7 @@ h1, h2, h3, h4, h5, h6{
     max-width: 1000px;
     margin: auto;
     overflow: hidden;
-    padding: 80px 40px;
+    padding: 60Px 40px;
 }
 
 
@@ -250,6 +250,10 @@ h1{
     margin: 0 0 0 30px;
 }
 
+.textos-header1{
+    transform: translateY(20px);
+}
+
 .contenido-header p{
     font-weight: 100;
     margin-top: 14px;
@@ -271,6 +275,69 @@ h1{
     border-radius: 5px;
     box-shadow: 0 8px 32px rgba(31, 222, 130,.46);
 }
+
+.inscriptionlink a{
+    margin: none;
+    text-decoration: none;
+    box-shadow: none;
+    border-radius: none;
+    background: none;
+    color: rgb(86, 89, 230);
+    width: fit-content;
+    padding: 0 0;
+    font-weight: none;
+
+}
+
+.inscriptionlink p{
+    font-weight: none;
+    margin-top: none;
+    
+}
+
+.box-promo{
+    margin: 20px 0 0 0;
+    
+   width: 70%;
+
+    align-items: center;
+    text-align: center;
+    background: transparent;
+}
+
+.box-promo h4{
+    padding-top: 10px;
+   padding-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    width: fit-content;
+    transition: all 400ms ease;
+    background: rgb(86, 89, 230);
+    overflow: hidden;
+      box-shadow: 0px 1px 10px rgba(0,0,0, 0.2);
+      z-index: 5;
+
+}
+.box-promo h4:hover{
+box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
+    transform: translateY(-3%);
+
+}
+
+.box-promo h1{
+    width: fit-content;
+    font-size: 50PX;
+    color:white;
+    transform: rotate(-10deg);
+    animation: ease-in animat 1.5s;
+
+    z-index: 10;
+    background-color: rgb(238, 236, 149);
+    
+}
+
+
+
 
 .titulo{
     font-size: 50px;
@@ -508,7 +575,115 @@ h1{
     color: #1fde82;
     font-size: 20px;
 }
+/**/
 
+.store{
+    background:  rgba(255, 255, 255, 0.74);
+    padding-top: 40px;
+  
+}
+
+
+.store>h4{
+    color: #black;
+    font-size: 20px;
+    padding-left: 40px;
+}
+
+.store>p{
+    color: rgba(70, 69, 69, 0.774);
+    font-size: 15px;
+    padding-left: 40px;
+}
+.main-carrito{
+
+   transform: translateY(-20%);
+}
+
+.conten-store{
+
+    display: flex;
+    padding-top: 15px;
+    justify-content: space-evenly;
+
+}
+
+.productos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.productos .producto{
+    width: 30%;
+    background:#2570ff;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 30px;
+    margin-bottom: 30px;
+}
+
+.productos .producto h4{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.productos .producto p{
+    color: #f2f5fc;
+    font-weight: 300;
+}
+.productos .producto a{
+    color: #f2f5fc;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: inherit;
+}
+.store-text{
+   
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.store-text h4{
+    
+    color: black;
+    font-size: 40px;
+}
+
+.store-text p{
+    color: rgba(70, 69, 69, 0.774);
+    font-size: 30px;
+    font-weight: 300;
+
+}
+
+.store-text>a{
+    color: #2570ff;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #2570ff;
+    padding: 10px 0;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.store-text>a:hover{
+    color: rgb(255, 255, 255);
+    background-color: #2570ff;
+    transition: color .5s;
+}
+
+/**/
+
+
+
+/**/
 .btnnew:hover{
     opacity: 0.7;
 }
@@ -645,14 +820,32 @@ align-items: center;
  
 }
 
-.fondo2{
-    width: 20%;
-    height: 128px;
+.fondoArduino{
+    display: none;
+    width: 80%;
+    height: 300px;
     background-color: transparent;
-    background: url('../img/logomr.png') no-repeat center center/cover;
-
+    background: url('../img/arduino.png') no-repeat center center/cover;
  
-    transform: translateX(200%);
+}
+.mfondo2{
+    display: flex;
+
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.fondo2{
+  
+
+    width: 25%;
+    height: 60px;
+    background: url('../img/logomr.png') no-repeat center center/cover;
+    
+
 }
 
 
@@ -771,7 +964,7 @@ align-items: center;
     }
 
     .linksMR a i:hover{
-        color: #e1eb53;
+        color: #4930d6cc;
         background-color: #fff ;
         border-radius: 10%;
     }
@@ -990,6 +1183,11 @@ align-items: center;
 
     @media (max-width: 1000px) {
 
+     
+        .mainportada{
+            display: none;
+        }
+       
         .fondo{
             width: 100%;
             height: 120px;
@@ -1081,6 +1279,25 @@ align-items: center;
         }
 
 
+/**/
+        .conten-store{
+            flex-direction: column-reverse;
+        }
+
+ 
+
+        .productos{
+            width: 100%;
+            
+        }
+
+    
+/**/
+
+
+
+
+
         .webnav{
             display: none;
         }
@@ -1154,7 +1371,9 @@ align-items: center;
         .curso-info{
             transform: translateY(20%);
         }
-      
+        .textos-header1{
+            transform: translateY(-50px);
+        }
     }
 
     @media (max-width: 600px){
@@ -1257,6 +1476,13 @@ align-items: center;
             font-size: 22px;
             padding: 0 5px;
         }
+
+/**/
+
+        .productos .producto{
+            width: 95%;
+        }
+/**/
 
         /**/
         .showcase{
@@ -1416,7 +1642,7 @@ align-items: center;
         }
 
         .textos-header1{
-            transform: translateY(-100px);
+            transform: translateY(-230px);
         }
 
         .logoresponsive{
@@ -1488,9 +1714,31 @@ align-items: center;
 display: block;
       
             background: url('../img/rlogo.png') no-repeat center center/cover;
-            
-            
-            
-        
+
         }
+
+        .main-contenedor{
+            height: 600px;
+            }
+        .contenido-header{
+            height: 1800px;
+            transform: translateY(-20%);
+            }
+
+            .box-promo h1{
+                
+                
+                padding-bottom: 5px;
+                transform: translateY(0%);
+                
+            }
+
+
+            .inscriptionVolver{
+                padding: 0 10px;
+                transform: translateY(-5%);
+                height: 80%;
+            }
+            
+           
     }
