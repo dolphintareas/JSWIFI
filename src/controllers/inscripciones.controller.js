@@ -3,7 +3,7 @@ const inscripcionesCtrl = {};
 const passport = require('passport');
 
 const Inscripcion = require('../models/Inscripciones')
-const mailer = require('../config/notificacionesInscripcion');
+const {enviar_mail2} = require('../config/notificaciones');
 
 //router.get('/cursos/inscribir', renderInscriptionForm);
 inscripcionesCtrl.renderInscriptionForm = (req, res) => {
@@ -36,7 +36,7 @@ inscripcionesCtrl.newInscription = async (req, res) =>{
             
             await newInscription.save();
 
-            mailer.enviar_mail(newInscription.emailinscr, newInscription.nombreinscr);
+            enviar_mail2(newInscription.emailinscr, newInscription.nombreinscr);
             res.render('cursos/success-inscription',{newInscription, titlepage: 'Estás inscrito al curso'});
     }
 };

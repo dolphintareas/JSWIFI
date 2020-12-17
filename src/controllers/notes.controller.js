@@ -2,7 +2,7 @@ const notesCtrl = {};
 
 const Note = require('../models/Note');
 const User = require('../models/User');
-const mailer = require('../config/notificaciones');
+const {enviar_mail1} = require('../config/notificaciones');
 
 
 notesCtrl.renderNoteForm = (req, res) => {
@@ -29,7 +29,7 @@ notesCtrl.createNewNote = async (req, res) => {
     await newNote.save();
 
     const mailUser = await User.findById(req.user.id);
-    mailer.enviar_mail(mailUser.email);
+    enviar_mail1(mailUser.email);
     req.flash('success_msg', 'Tarea añadida satisfactoriamente');
     res.redirect('/notes')
 }
