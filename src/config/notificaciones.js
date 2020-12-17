@@ -3,13 +3,16 @@
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-this.enviar_mail = (pnombre) => {
-
+this.enviar_mail = (pemail) => {
+   
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
             user: process.env.MAILUSER,
             pass: process.env.MAILPSSWD
+        },
+        tls: {
+            rejectUnauthorized: false
         }
 
     });
@@ -25,7 +28,7 @@ this.enviar_mail = (pnombre) => {
              <td bgcolor="" width="600px">
                 <h1 style="color: #fff; text-align:center">Bienvenido</h1>
                 <p style="color: #fff; text-align:center">
-                    <span style="color: #e84393">${pnombre}</span> subió una tarea
+                    <span style="color: #e84393"> ${pemail} </span> subió una tarea
                 </p>
              </td>
  
@@ -41,7 +44,7 @@ this.enviar_mail = (pnombre) => {
 
     transporter.sendMail(mail_options, (error, info) =>{
         if(error){
-            console.log('error encontradod')
+            console.log('error encontrado')
             console.log(error);
         }else{
             console.log('El correo se envió correctamente' + info.response);

@@ -1,6 +1,7 @@
 const notesCtrl = {};
 
 const Note = require('../models/Note');
+const User = require('../models/User');
 const mailer = require('../config/notificaciones');
 
 
@@ -26,7 +27,9 @@ notesCtrl.createNewNote = async (req, res) => {
         req.flash('error_msg', 'No subiste ningún archivo')
     }
     await newNote.save();
-    mailer.enviar_mail(newNote.user);
+
+    const mailUser = await User.findById(req.user.id);
+    mailer.enviar_mail(mailUser.email);
     req.flash('success_msg', 'Tarea añadida satisfactoriamente');
     res.redirect('/notes')
 }
