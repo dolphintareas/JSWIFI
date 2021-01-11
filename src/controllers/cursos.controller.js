@@ -26,6 +26,9 @@ cursosCtrl.renderCoursesForm = (req, res) => {
     res.render('cursos/new-curso',{titlepage: 'Agrega un curso'});
 }
 
+
+
+
 //router.post('/cursos/add', newCourse);
 cursosCtrl.newCourse = async (req, res) =>{
     
@@ -36,6 +39,14 @@ cursosCtrl.newCourse = async (req, res) =>{
             req.flash('success_msg', 'Hemos recibido tu curso, un tutor se comunicará contigo en breves momentos');
             res.redirect('/cursos/add');
 };
+
+
+//router.get('/cursos/classroom', renderAulaVirtual);
+cursosCtrl.renderAulaVirtual = (req, res) => {
+    
+    res.render('cursos/aulavirtual',{titlepage: 'Bienvenido al Aula Virtual'});
+}
+
 
 //router.get('/cursos/edit/:id',renderEditCourse);
 cursosCtrl.renderEditCourse = async (req, res) => {

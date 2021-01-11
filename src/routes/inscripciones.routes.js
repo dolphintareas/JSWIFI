@@ -2,7 +2,7 @@ const {Router} = require('express');
 const router = Router();
 
 const {renderInscriptionForm, newInscription, allInscription, renderEditInscription, updateInscription, deleteInscription, cursoPiC, cursoMatlab,
-    cursoSolidworks, cursoInventor, cursoLabview, cursoTiaPortal, cursoTekla, cursoAutocad, cursoPlant3d, cursoArduino} = require ('../controllers/inscripciones.controller')
+    cursoSolidworks, cursoInventor, cursoLabview, cursoTiaPortal, cursoTekla, cursoAutocad, cursoPlant3d, cursoArduino, cursoRobotica, av1Robotica, av2Robotica, av3Robotica, av4Robotica} = require ('../controllers/inscripciones.controller')
 const {isModerador, isAuthenticated} = require('../helpers/auth');
 
 
@@ -35,5 +35,9 @@ router.get('/cursos/inscripciones/MarvinRobot/cursoTekla', cursoTekla);
 router.get('/cursos/inscripciones/MarvinRobot/cursoAutocad', cursoAutocad);
 router.get('/cursos/inscripciones/MarvinRobot/cursoPlant3d', cursoPlant3d);
 router.get('/cursos/inscripciones/MarvinRobot/cursoarduino', cursoArduino);
-
+router.get('/cursos/inscripciones/MarvinRobot/cursorobotica', cursoRobotica);
+router.get('/cursos/inscripciones/MarvinRobot/av1Robotica', av1Robotica);
+router.get('/cursos/inscripciones/MarvinRobot/av2Robotica', av2Robotica);
+router.get('/cursos/inscripciones/MarvinRobot/av3Robotica', av3Robotica);
+router.get('/cursos/inscripciones/MarvinRobot/av4Robotica', av4Robotica);
 module.exports = router;

@@ -1,7 +1,7 @@
 const {Router} = require('express');
 const router = Router();
 
-const {findCourse, showCourses, renderCoursesForm, newCourse, renderEditCourse, updateCourse, deleteCourse, renderPaymentForm, Payment, renderWoomStoreForm, WoomStore} = require ('../controllers/cursos.controller')
+const {findCourse, showCourses, renderCoursesForm, newCourse, renderEditCourse, updateCourse, deleteCourse, renderPaymentForm, Payment, renderWoomStoreForm, WoomStore, renderAulaVirtual} = require ('../controllers/cursos.controller')
 const {isModerador} = require('../helpers/auth');
 
 
@@ -13,6 +13,8 @@ router.get('/cursos/all', isModerador, showCourses);
 router.get('/cursos/add', renderCoursesForm);
 router.post('/cursos/add', newCourse);
 
+//aula virtual
+router.get('/cursos/classroom', renderAulaVirtual);
 
 
 //editar cursos

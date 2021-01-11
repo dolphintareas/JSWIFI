@@ -115,5 +115,21 @@ inscripcionesCtrl.cursoArduino = (req, res) => {
     res.render('cursos/infoArduino',{titlepage: 'Temario de Curso Arduino'});
 }
 
+inscripcionesCtrl.cursoRobotica = (req, res) => { 
+    res.render('cursos/infoRobotica',{titlepage: 'Temario de Curso Robotica'});
+}
+
+inscripcionesCtrl.av1Robotica = (req, res) => { 
+    res.render('cursos/av1Robotica',{titlepage: 'Temario de Curso Robotica'});
+}
+inscripcionesCtrl.av2Robotica = (req, res) => { 
+    res.render('cursos/av2Robotica',{titlepage: 'Temario de Curso Robotica'});
+}
+inscripcionesCtrl.av3Robotica = (req, res) => { 
+    res.render('cursos/av3Robotica',{titlepage: 'Temario de Curso Robotica'});
+}
+inscripcionesCtrl.av4Robotica = (req, res) => { 
+    res.render('cursos/av4Robotica',{titlepage: 'Temario de Curso Robotica'});
+}
 
 module.exports = inscripcionesCtrl;

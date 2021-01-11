@@ -25,6 +25,8 @@
     </div> 
     <div class="fondoArduino" id="MRimagenes10">
     </div> 
+    <div class="fondoRobotica" id="MRimagenes11">
+    </div> 
 </div>
 
 
@@ -36,6 +38,7 @@
             <a href="/cursos/inscripciones/MarvinRobot/cursoPicC" id="picc">PIC C</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoMatlab" id="matlab">MATLAB</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoArduino" id="arduino">Arduino</a>
+            <a href="/cursos/inscripciones/MarvinRobot/cursoRobotica" id="robotica">Robotica</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoSolidworks" id="solidworks">SOLIDWORKS</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoInventor" id="inventor">INVENTOR</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoLabview" id="labview">LABVIEW</a>
@@ -43,6 +46,7 @@
             <a href="/cursos/inscripciones/MarvinRobot/cursoTekla" id="tekla">TEKLA</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoAutocad" id="autocad">AUTOCAD</a>
             <a href="/cursos/inscripciones/MarvinRobot/cursoPlant3d" id="plant3d">PLANT 3D</a>
+
             <p class="p-4"><i class="fa fa-info-circle" aria-hidden="true"></i> Llena el formulario para inscribirte a un curso <br>
                <i class="fa fa-info-circle" aria-hidden="true"></i> Una vez enviado el formulario, recibirás el link de acceso y horarios del curso</p>
         </section>
@@ -131,6 +135,9 @@
 <ul >
     <i class="fa fa-cube" aria-hidden="true"></i> <a href="/cursos/inscripciones/MarvinRobot/cursoSolidworks">SOLIDWORKS</a>
 </ul>
+<ul >
+    <i class="fa fa-steam" aria-hidden="true"></i> <a href="/cursos/inscripciones/MarvinRobot/cursoRobotica" >ROBOTICA EDUCATIVA</a>
+</ul>
 </div>
 <br>
 
@@ -162,6 +169,8 @@
     const MRimagenes8 = document.getElementById("MRimagenes8");
     const MRimagenes9 = document.getElementById("MRimagenes9");
     const MRimagenes10 = document.getElementById("MRimagenes10");
+    const MRimagenes11 = document.getElementById("MRimagenes11");
+
 
     const picc = document.querySelector("#picc");
     const matlab = document.querySelector("#matlab");
@@ -173,6 +182,7 @@
     const autocad = document.querySelector("#autocad");
     const plant3d = document.querySelector("#plant3d");
     const arduino = document.querySelector("#arduino");
+    const robotica = document.querySelector("#robotica");
 
     picc.addEventListener('mouseover', (e)=>{
         MRimagenes.style.display = 'none';
@@ -255,6 +265,15 @@
         MRimagenes.style.display = 'block';
     })
 
+    plant3d.addEventListener('mouseover', (e)=>{
+        MRimagenes.style.display = 'none';
+        MRimagenes9.style.display = 'block';
+    })
+    plant3d.addEventListener('mouseout', (e)=>{
+        MRimagenes9.style.display = 'none';
+        MRimagenes.style.display = 'block';
+    })
+
     arduino.addEventListener('mouseover', (e)=>{
          MRimagenes.style.display = 'none';
         MRimagenes10.style.display = 'block';
@@ -264,12 +283,13 @@
         MRimagenes.style.display = 'block';
     })
 
-    plant3d.addEventListener('mouseover', (e)=>{
-        MRimagenes.style.display = 'none';
-        MRimagenes9.style.display = 'block';
+    robotica.addEventListener('mouseover', (e)=>{
+         MRimagenes.style.display = 'none';
+        MRimagenes11.style.display = 'block';
     })
-    plant3d.addEventListener('mouseout', (e)=>{
-        MRimagenes9.style.display = 'none';
+    robotica.addEventListener('mouseout', (e)=>{
+        MRimagenes11.style.display = 'none';
         MRimagenes.style.display = 'block';
     })
+
 </script>
