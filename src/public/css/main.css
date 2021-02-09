@@ -726,9 +726,9 @@ box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 330px;
-    transform: translate(10%,-10%);
+    transform: translate(20%,0%);
 }
 .fondoMR{
  
@@ -1861,6 +1861,10 @@ display: block;
                 height: 80%;
             }
             
+            .ancho_enlaces{
+                
+                transform: translateX(5%);
+            }
 
            
     }
