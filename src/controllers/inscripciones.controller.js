@@ -120,16 +120,16 @@ inscripcionesCtrl.cursoRobotica = (req, res) => {
 }
 
 inscripcionesCtrl.av1Robotica = (req, res) => { 
-    res.render('cursos/av1Robotica',{titlepage: 'Temario de Curso Robotica'});
+    res.render('cursos/av1Robotica',{titlepage: 'Robótica Educativa: Mis Clases'});
 }
 inscripcionesCtrl.av2Robotica = (req, res) => { 
-    res.render('cursos/av2Robotica',{titlepage: 'Temario de Curso Robotica'});
+    res.render('cursos/av2Robotica',{titlepage: 'Robótica Educativa: Descarga las diapositivas'});
 }
 inscripcionesCtrl.av3Robotica = (req, res) => { 
-    res.render('cursos/av3Robotica',{titlepage: 'Temario de Curso Robotica'});
+    res.render('cursos/av3Robotica',{titlepage: 'Robótica Educativa: Tutoriales'});
 }
 inscripcionesCtrl.av4Robotica = (req, res) => { 
-    res.render('cursos/av4Robotica',{titlepage: 'Temario de Curso Robotica'});
+    res.render('cursos/av4Robotica',{titlepage: 'Robótica Educativa: Accede vía Zoom'});
 }
 
 module.exports = inscripcionesCtrl;
