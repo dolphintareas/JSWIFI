@@ -1,16 +1,16 @@
 const indexCtrl =  {};
 
 indexCtrl.renderIndex = (req, res)=>{
-    res.render('index',{titlepage: 'Woom! Aprende ahora'})
+    res.render('index',{titlepage: 'TJ Ingeniería Termica'})
 };
 
 indexCtrl.renderAbout = (req, res)=>{
-    res.render('about',{titlepage: 'Woom! Quienes Somos'})
+    res.render('about',{titlepage: 'TJ - Quienes Somos'})
 };
 
 //router.get('/contact', renderContact);
 indexCtrl.renderContact = (req, res)=>{
-    res.render('contacto',{titlepage: 'Woom! Aprende ahora'})
+    res.render('contacto',{titlepage: 'TJ - Aprende ahora'})
 };
 
 
