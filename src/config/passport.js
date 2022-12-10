@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const config = require('../config');
 
 const LocalStrategy = require ('passport-local').Strategy;
-const FacebookStrategy = require('passport-facebook').Strategy;
+//const FacebookStrategy = require('passport-facebook').Strategy;
 
 
 const User = require('../models/User')
@@ -37,7 +37,7 @@ passport.use(new LocalStrategy({
     
 }));
 
-passport.use(new FacebookStrategy({
+/*passport.use(new FacebookStrategy({
     clientID: process.env.CLIENT_ID_FB,
     clientSecret: process.env.CLIENT_SECRET_FB,
     callbackURL: "/users/fbSignin/Valid",
@@ -67,7 +67,7 @@ passport.use(new FacebookStrategy({
                             
 
 });
-  }));
+  }));*/
 
 
 passport.serializeUser((user,done)=>{
