@@ -1,4 +1,4 @@
-const notesCtrl = {};
+/*const notesCtrl = {};
 
 const Note = require('../models/Note');
 const User = require('../models/User');
@@ -89,4 +89,4 @@ notesCtrl.deleteNote = async (req, res) => {
 //     res.render('notes/upload');
 // }
 
-module.exports = notesCtrl
+module.exports = notesCtrl*/

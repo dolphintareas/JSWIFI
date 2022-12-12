@@ -1,4 +1,4 @@
-const passport = require('passport');
+/*const passport = require('passport');
 
 const jwt = require('jsonwebtoken');
 const config = require('../config');
@@ -69,7 +69,7 @@ passport.use(new LocalStrategy({
 });
   }));*/
 
-
+/*
 passport.serializeUser((user,done)=>{
     done(null, user.id);
 });
@@ -78,4 +78,4 @@ passport.deserializeUser((id,done)=>{
     User.findById(id, (err, user)=>{
         done(err,user);
     })
-});
+});*/

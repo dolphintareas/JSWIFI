@@ -1,4 +1,4 @@
-const authCtrl = {};
+/*const authCtrl = {};
 const passport = require('passport');
 
 const User = require('../models/User')
@@ -111,4 +111,4 @@ authCtrl.signup = async (req, res) =>{
 
    
   
-    module.exports = authCtrl;
+    module.exports = authCtrl;*/

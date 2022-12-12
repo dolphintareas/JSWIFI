@@ -14,9 +14,9 @@ const {createRoles, createAdmin} = require('./libs/initialSetup');
 
 //Initializations
 const app = express();
-createRoles();
-createAdmin();
-require('./config/passport');
+//createRoles();
+//createAdmin();
+//require('./config/passport');
 
 
 //Settings

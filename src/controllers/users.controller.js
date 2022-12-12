@@ -1,4 +1,4 @@
-const usersCtrl = {};
+/*const usersCtrl = {};
 
 const User = require('../models/User')
 const Note = require('../models/Note')
@@ -74,4 +74,4 @@ const Note = require('../models/Note')
         res.redirect('/users/all')
     }
 
-module.exports = usersCtrl;
+module.exports = usersCtrl;*/

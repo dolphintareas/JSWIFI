@@ -1,4 +1,4 @@
-const {Schema, model} = require('mongoose');
+/*const {Schema, model} = require('mongoose');
 const findOrCreate = require('mongoose-findorcreate');
 const bcrypt = require('bcryptjs');
 
@@ -30,4 +30,4 @@ UserSchema.methods.matchPassword= async function(password) {
     return await bcrypt.compare(password, this.password)
 }
 
-module.exports = model('User', UserSchema);
+module.exports = model('User', UserSchema);*/

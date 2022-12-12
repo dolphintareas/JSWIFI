@@ -1,4 +1,4 @@
-const initialst = {};
+/*const initialst = {};
 const passport = require('passport');
 const Role = require('../models/Role')
 const User = require('../models/User')
@@ -72,4 +72,4 @@ initialst.createAdmin = async()=>{
 };
 
 
-module.exports = initialst;
+module.exports = initialst;*/
