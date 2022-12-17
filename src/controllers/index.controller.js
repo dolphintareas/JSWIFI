@@ -1,16 +1,16 @@
 const indexCtrl =  {};
 
 indexCtrl.renderIndex = (req, res)=>{
-    res.render('index',{titlepage: 'TJ Ingeniería Termica'})
+    res.render('index',{titlepage: 'JSNET - 100% FIBRA ÓPTICA'})
 };
 
 indexCtrl.renderAbout = (req, res)=>{
-    res.render('about',{titlepage: 'TJ - Quienes Somos'})
+    res.render('about',{titlepage: 'JSNET - Quienes Somos'})
 };
 
 //router.get('/contact', renderContact);
 indexCtrl.renderContact = (req, res)=>{
-    res.render('contacto',{titlepage: 'TJ - Aprende ahora'})
+    res.render('contacto',{titlepage: 'JSNET - Contáctanos'})
 };
 
 

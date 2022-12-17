@@ -1,5 +1,5 @@
 body{
-   background: #ffffff;
+   background: #000000;
    overflow-x: hidden;
 }
 
@@ -12,7 +12,7 @@ body{
     align-items: center ;
     text-align: center;
 }
-
+    
 .temario a{
     margin: 28px 0 0 0;
     width: 150px;
@@ -116,7 +116,7 @@ header::before{
     
     height: 80px;
     width: 100%;
-    background: #fff;
+    background: rgb(194, 39, 39);
      border-bottom: 2px solid transparent;
      box-shadow: 2px 2px 10px 0 rgba(10, 14, 247, 0.932);
      position: fixed;
@@ -149,15 +149,18 @@ header::before{
 
 .enlaces-header{
    font-weight: 300;
+  
 }
 
 .enlaces-header a{
     margin-left: 20px;
+    color: #7bb21d;
+    font-weight: 500;
 }
 
 
 .claselogo {
-    width: 78px;
+    width: 250px;
     vertical-align: top; 
     opacity: 0.9;
 }
@@ -165,7 +168,7 @@ header::before{
 .claselogo:hover {
    
     opacity: 1;
-    width: 80px;
+    width: 150px;
    
 }
 
@@ -198,24 +201,32 @@ h1, h2, h3, h4, h5, h6{
 
 .contenedor-1{
     width: 100%;
-    max-width: 1000px;
-    margin: auto;
+    max-width: 1500px;
+    margin-top: -20px;
+   
     overflow: hidden;
-    padding: 60Px 40px;
+    padding: 40Px 60px;
 }
 
-
+.contenedor-2{
+    width: 100%;
+    max-width: 1000px;
+    margin-top: -20px;
+   
+    overflow: hidden;
+    padding: 40Px 60px;
+}
 
 h1{
     font-size: 50px;
 }
 
 .contenido-header{
-    width: 100%;
-    height: 600px;
-    display: flex;
+    width: 95%;
+    height: 295px;
+    display: flexbox;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
 }
 
 .signuptranslate{
@@ -235,9 +246,9 @@ h1{
 }
 
 .contenido-header>img{
-    width: 550px;
+    width: 450px;
     animation: ease-in animat 1.5s;
-    
+
 }
 
 @keyframes animat{
@@ -257,15 +268,18 @@ h1{
 }
 
 .contenido-header p{
-    font-weight: 100;
+    font-weight: 400;
     margin-top: 14px;
-    color: #5d6678;
+    color: #3257a1;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: right;
 }
 
 .contenido-header a{
     margin: 28px 0 0 0;
-    width: 130px;
-    display: inline-block;
+    width: 220px;
+    display: inline;
     background: #1fde82;
     text-align: center;
     color: #fff;
@@ -340,9 +354,19 @@ box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
 
 
 
+.titulo1{
+    font-size: 40px;
+    color:rgb(255, 255, 255);
+}
 
 .titulo{
+    font-size: 55px;
+    color:rgb(0, 0, 0);
+}
+
+.titulo p{
     font-size: 50px;
+    color:white;
 }
 
 .about-us{
@@ -352,8 +376,9 @@ box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
 .contenedor-articulo{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 60px;
+    margin-top: 20px;
     justify-content: space-around;
+  
 }
 
 .articulo{
@@ -412,9 +437,9 @@ box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
 
 .questions{
    
-    height: 600px;
+    height: 300px;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
 }
 
@@ -425,13 +450,15 @@ box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
 }
 
 .textos-questions{
-    margin: 0 0 0 30px;
+    margin: 0 0 0 150px;
 }
 
 .textos-questions p{
     font-weight: 100;
-    margin-top: 14px;
-    color: #5d6678;
+    margin-top: 0px;
+    font-size: 35px;
+    color: #184aaf;
+    width: 300px;
 }
 
 .textos-questions a{
@@ -917,9 +944,9 @@ align-items: center;
 
 .showcase{
     width: 100%;
-    height: 350px;
+    height: 600px;
     background-color: transparent;
-    background: url('../img/int3.jpg') no-repeat center center/cover;
+    background: url('../img/js13.png') no-repeat center center/cover;
     padding-bottom: 50px;
     margin-top: -20px;
 
@@ -933,16 +960,38 @@ align-items: center;
     
 }
 
+.mainportada{
+    width: 100%;
+    height: 450px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.mainportada2{
+    width: 100%;
+    height: 300px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+
+    
+}
+
 .transp{
-    background-color: rgba(19, 22, 202, 0.7);
+    background-color: rgba(255, 255, 255, 0.7);
 
   }
 
   .showcase p {
-      margin-bottom: -50px;
+      margin-bottom:300px;
       padding: 0 20px;
-      color: #fff;
+      color: rgb(10, 10, 10);
       text-decoration: none;
+      width: 100%;
   }
 
   .contenedor {
@@ -977,14 +1026,14 @@ align-items: center;
       border-radius: 6px;
       overflow: hidden;
       background: #fff;
-      box-shadow: 0px 1px 10px rgba(0,0,0, 0.2);
+      box-shadow: 0px 10px 10px rgba(252, 248, 248, 0.2);
       cursor: default;
-      transition: all 400ms ease;
+      transition: all 800ms ease;
   }
 
   .cardh:hover{
-    box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
-    transform: translateY(-3%);
+    box-shadow: 5px 5px 20px rgba(251, 249, 249, 0.4);
+    transform: translateY(-5%);
   }
 
   .cardh img{
